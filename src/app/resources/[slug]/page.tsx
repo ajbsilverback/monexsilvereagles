@@ -66,6 +66,8 @@ function getMonexAnchorText(slug: string): string {
     "portfolio-allocation": "Monex investing in silver resources",
     "first-time-buyers-guide": "Monex Silver Eagle Rounds product page",
     "tax-considerations": "Monex investing in silver resources",
+    "industrial-demand-investment-outlook": "Monex silver price charts",
+    "systematic-accumulation-strategies": "Monex investing in silver resources",
   };
   return anchorTextMap[slug] || "Monex silver resources";
 }
@@ -156,6 +158,20 @@ function generateAISummaryBullets(slug: string, title: string): string[] {
       "Understand capital gains basics and holding period implications",
       "Discover how state tax treatment varies across jurisdictions",
       "Get guidance on IRA ownership vs personal possession trade-offs",
+    ],
+    "industrial-demand-investment-outlook": [
+      "This article analyzes how industrial demand affects silver markets",
+      "Learn about solar, electronics, and medical applications for silver",
+      "Understand why industrial consumption creates a price floor for silver",
+      "Discover supply-side dynamics including byproduct production",
+      "Get context for silver's dual monetary and industrial demand profile",
+    ],
+    "systematic-accumulation-strategies": [
+      "This article explains disciplined approaches to building silver positions",
+      "Learn how dollar-cost averaging reduces timing risk",
+      "Understand transaction costs and optimal purchase frequency",
+      "Discover premium-aware accumulation strategies",
+      "Get practical guidance on implementing and maintaining a buying plan",
     ],
   };
 
@@ -293,10 +309,9 @@ export default async function ResourcePage({ params }: Props) {
                 {section.content.map((paragraph, pIndex) => (
                   <p
                     key={pIndex}
-                    className="text-slate-600 leading-relaxed text-base md:text-lg"
-                  >
-                    {replaceTokens(paragraph, priceData)}
-                  </p>
+                    className="text-slate-600 leading-relaxed text-base md:text-lg [&_a]:text-[var(--accent-primary)] [&_a]:font-medium hover:[&_a]:underline"
+                    dangerouslySetInnerHTML={{ __html: replaceTokens(paragraph, priceData) }}
+                  />
                 ))}
                 {section.subheading && (
                   <div className="space-y-3 pt-4">
@@ -306,10 +321,9 @@ export default async function ResourcePage({ params }: Props) {
                     {section.subcontent?.map((paragraph, sIndex) => (
                       <p
                         key={sIndex}
-                        className="text-slate-600 leading-relaxed text-base md:text-lg"
-                      >
-                        {replaceTokens(paragraph, priceData)}
-                      </p>
+                        className="text-slate-600 leading-relaxed text-base md:text-lg [&_a]:text-[var(--accent-primary)] [&_a]:font-medium hover:[&_a]:underline"
+                        dangerouslySetInnerHTML={{ __html: replaceTokens(paragraph, priceData) }}
+                      />
                     ))}
                   </div>
                 )}

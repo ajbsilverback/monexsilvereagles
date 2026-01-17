@@ -128,6 +128,26 @@ export const resources: Resource[] = [
     category: "Tax & Legal",
     monexLink: "https://www.monex.com/investing-in-silver/",
   },
+  {
+    slug: "industrial-demand-investment-outlook",
+    title: "Silver's Industrial Demand: What Round Investors Should Know",
+    description:
+      "Analysis of silver's growing industrial applications in solar energy, electronics, and medical devices, and how industrial demand dynamics affect silver round investment considerations.",
+    excerpt:
+      "Understand how industrial consumption patterns influence silver markets and what this means for physical silver round investors.",
+    category: "Market",
+    monexLink: "https://www.monex.com/silver-prices/",
+  },
+  {
+    slug: "systematic-accumulation-strategies",
+    title: "Building a Silver Position: Systematic Accumulation Approaches",
+    description:
+      "Practical strategies for accumulating silver rounds over time, including dollar-cost averaging, premium timing, and position-building considerations for long-term investors.",
+    excerpt:
+      "Learn disciplined approaches to building your silver round holdings through systematic accumulation strategies.",
+    category: "Investment",
+    monexLink: "https://www.monex.com/investing-in-silver/",
+  },
 ];
 
 export function getResourceBySlug(slug: string): Resource | undefined {

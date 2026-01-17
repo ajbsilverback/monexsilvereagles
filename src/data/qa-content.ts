@@ -245,4 +245,32 @@ export const resourceQA: Record<string, QAItem[]> = {
       answer: "IRA ownership provides tax-advantaged treatment: Traditional IRA contributions may be tax-deductible with taxes deferred until distribution; Roth IRA growth and qualified distributions are tax-free. Rounds' lower premiums help maximize IRA silver holdings.",
     },
   ],
+  "industrial-demand-investment-outlook": [
+    {
+      question: "How much of silver production goes to industrial uses?",
+      answer: "Industrial fabrication accounts for approximately 50% of annual silver consumption globally, according to the Silver Institute. Key sectors include electronics, solar photovoltaics, medical devices, and automotive applications. This industrial demand creates a consumption floor distinct from purely monetary metals.",
+    },
+    {
+      question: "Why is solar energy important for silver demand?",
+      answer: "Solar photovoltaic manufacturing is silver's fastest-growing industrial application. Silver paste is essential for solar cell conductivity, with each panel containing approximately 20 grams. As global solar capacity expands for decarbonization goals, this creates sustained incremental silver demand.",
+    },
+    {
+      question: "How does industrial demand affect silver round investors?",
+      answer: "Industrial demand provides a consumption floor for silver prices, creates growth drivers independent of investment sentiment, and contributes to silver's higher volatility compared to gold. Round holders benefit from exposure to both industrial and monetary demand dynamics.",
+    },
+  ],
+  "systematic-accumulation-strategies": [
+    {
+      question: "What is dollar-cost averaging for silver rounds?",
+      answer: "Dollar-cost averaging involves investing a fixed dollar amount at regular intervals regardless of price. When prices are lower, your budget buys more rounds; when higher, fewer rounds. This mechanical approach tends to produce an average cost below the simple average of prices during accumulation.",
+    },
+    {
+      question: "How often should I buy silver rounds when accumulating?",
+      answer: "Monthly purchasing represents a practical frequency for most investors, balancing timing diversification against transaction costs. However, if your dealer offers volume discounts, quarterly larger purchases may be more cost-effective. Calculate total costs under both scenarios.",
+    },
+    {
+      question: "Is dollar-cost averaging better than buying all at once?",
+      answer: "Research generally shows lump-sum investing outperforms DCA in rising markets. However, DCA reduces timing risk, provides psychological comfort, and is the only option when you don't have a lump sum available. The behavioral benefits of maintaining discipline often justify the approach.",
+    },
+  ],
 };
