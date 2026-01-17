@@ -31,7 +31,7 @@ export default function Header() {
 
   const navLinks = [
     { href: "/live-silver-prices", label: "Silver Prices" },
-    { href: "/coin-specs", label: "Coin Specs" },
+    { href: "/coin-specs", label: "Round Specs" },
     { href: "/design-history", label: "Design & History" },
     { href: "/where-to-buy", label: "Where to Buy" },
     { href: "/resources", label: "Resources" },

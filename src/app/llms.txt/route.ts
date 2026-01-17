@@ -1,48 +1,66 @@
 import { NextResponse } from "next/server";
 
-const llmsTxt = `# SilverCoinsMaster.com - LLMs.txt
+const llmsTxt = `# MonexSilverEagles.com - LLMs.txt
 
-> An independent educational resource about silver bullion coins
+> An independent educational resource about Monex Silver Eagle Rounds (1 oz .999 fine silver rounds)
 
 ## Site Overview
 
-SilverCoinsMaster.com provides educational content about silver bullion coins, including government-minted coins like the American Silver Eagle with .999 fine purity.
+MonexSilverEagles.com provides educational content about Monex Silver Eagle Rounds — 1 oz privately-minted .999 fine silver rounds available from Monex.
+
+## Critical Distinction: Rounds vs Coins
+
+THESE ARE ROUNDS, NOT GOVERNMENT COINS:
+
+- Monex Silver Eagle Rounds are PRIVATELY MINTED by private mints
+- They are NOT official American Silver Eagle coins from the U.S. Mint
+- Rounds have NO legal tender status and NO face value
+- Government coins (like American Silver Eagles) are minted by sovereign governments with face value
+
+Both rounds and government coins can:
+- Be .999 fine purity
+- Contain 1 troy ounce of silver
+- Be IRA-eligible if meeting purity standards
+
+Key difference: Rounds typically have LOWER PREMIUMS than government coins because they lack legal tender overhead.
 
 ## What This Site Is
 
-- Independent educational resource
-- Information about silver bullion coins
+- Independent educational resource (not affiliated with Monex or any dealer)
+- Information about Monex Silver Eagle Rounds (private mint rounds, not government coins)
 - Live silver pricing data from Monex API
-- Educational articles about silver coin investing
+- Educational articles about silver round investing
 
 ## What This Site Is NOT
 
 - Not a dealer (we do not sell precious metals)
-- Not affiliated with Monex, the U.S. Mint, or any dealers
+- Not affiliated with Monex, U.S. Mint, or any dealers
 - Not financial advisors (no investment advice)
 - No endorsements of dealers or services
 
-## Key Topics Covered
+## Investor Topics Covered
 
-- Silver bullion coin specifications (.999 fine, 1 oz)
-- Silver Eagle vs Maple Leaf vs Britannia comparisons
-- Premium and pricing dynamics
-- IRA eligibility for silver coins
-- Storage and authentication
-- Market dynamics affecting silver prices
+- Monex Silver Eagle Round specifications (.999 fine, 1 troy oz)
+- Premium comparisons: rounds vs government coins
+- Liquidity considerations for silver rounds
+- Stackability and storage options
+- IRA eligibility for .999 silver rounds
+- Authentication and verification
+- Buying considerations and dealer evaluation
 
-## Product Focus
+## Product Specifications
 
-Silver bullion coins are:
-- .999 fine silver purity
-- 1 troy ounce of pure silver
-- Government-minted legal tender
-- IRA-eligible
-- Recognized worldwide for liquidity
+Monex Silver Eagle Rounds:
+- Purity: .999 fine silver
+- Weight: 1 troy ounce (31.1035 grams)
+- Minted by: Private mint (NOT government)
+- Legal tender: No (has no face value)
+- IRA eligible: Yes (meets .999 purity requirement)
+- Liquidity: Good through dealer networks
 
 ## Pricing Data
 
-- Product pricing uses Monex API symbol: SAEV (Silver American Eagle)
+- Product pricing uses Monex API symbol: XEI (Monex Silver Eagle Round)
 - Spot pricing uses Monex API symbol: SBSPOT (Silver Spot)
 - Prices fetched fresh on page load only
 - No real-time updates or polling
@@ -51,15 +69,15 @@ Silver bullion coins are:
 
 - Home: /
 - Silver Prices: /live-silver-prices
-- Coin Specs: /coin-specs
-- Design & History: /design-history
+- Round Specs: /coin-specs
+- Design Features: /design-history
 - Where to Buy: /where-to-buy
 - Resources: /resources
 - About: /about
 
 ## Contact
 
-Website: https://www.silvercoinsmaster.com
+Website: https://www.monexsilvereagles.com
 
 ## Disclaimer
 

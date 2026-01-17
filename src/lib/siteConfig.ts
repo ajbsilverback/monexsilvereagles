@@ -1,14 +1,14 @@
 /**
  * SITE CONFIGURATION - Single Source of Truth
  * 
- * Silver Coins Master Template
+ * Monex Silver Eagle Rounds Microsite
  * 
  * ═══════════════════════════════════════════════════════════════════════════
  * GUARDRAILS - Do Not Modify Without Intentional Review
  * ═══════════════════════════════════════════════════════════════════════════
  * 
  * PROTECTED ELEMENTS:
- * - Pricing symbols (placeholder - update for specific site)
+ * - Pricing symbols (XEI for product, SBSPOT for spot)
  * - Monex API endpoints
  * - Monex chart embed script
  * - Navigation IA
@@ -24,9 +24,10 @@
  * - Vercel auto-deploys from main only
  * 
  * CONTENT:
- * - This template is for silver bullion coin educational sites
+ * - This site is for Monex Silver Eagle Rounds (private mint rounds)
+ * - These are ROUNDS, NOT official government coins
  * - Focus on: purity (.999 fine), premiums, liquidity, IRA eligibility,
- *   government-minted coins, obverse/reverse designs
+ *   privately-minted rounds, obverse/reverse designs
  * 
  * ═══════════════════════════════════════════════════════════════════════════
  */
@@ -37,26 +38,26 @@ export const SITE_CONFIG = {
   // ============================================================
   
   /** Primary domain with https:// prefix */
-  domain: "https://www.silvercoinsmaster.com",
+  domain: "https://www.monexsilvereagles.com",
   
   /** Canonical domain (usually same as domain) */
-  canonicalDomain: "https://www.silvercoinsmaster.com",
+  canonicalDomain: "https://www.monexsilvereagles.com",
   
   /** Brand name displayed in UI and metadata */
-  brandName: "Silver Bullion Coins",
+  brandName: "Monex Silver Eagle Rounds",
 
   // ============================================================
   // PRODUCT DEFINITION
   // ============================================================
   
   /** Primary product name */
-  primaryProduct: "silver bullion coins",
+  primaryProduct: "Monex Silver Eagle Rounds",
   
   /** Metal type: "gold" | "silver" | "platinum" | "palladium" */
   metal: "silver",
   
   /** Product form: "bars" | "coins" | "rounds" */
-  form: "coins",
+  form: "rounds",
   
   /** Size or series identifier */
   sizeOrSeries: "1 oz",
@@ -70,9 +71,9 @@ export const SITE_CONFIG = {
   
   /** 
    * Product price symbol for Monex API
-   * SAEV = Silver American Eagle (product pricing)
+   * XEI = Monex Silver Eagle Round (product pricing)
    */
-  productSymbol: "SAEV",
+  productSymbol: "XEI",
   
   /**
    * Spot index symbol for Monex API (raw metal spot price)
@@ -86,14 +87,14 @@ export const SITE_CONFIG = {
   
   /** Target audience description */
   angle:
-    "investors seeking government-minted silver bullion coins with .999 fine purity and strong liquidity",
+    "investors seeking privately-minted silver rounds with .999 fine purity, competitive premiums, and strong liquidity",
 
   /** Array of relevant Monex.com links for citations */
   monexLinks: [
-    "https://www.monex.com/silver-coins/",
-    "https://www.monex.com/silver-prices/",
+    "https://www.monex.com/1-oz-monex-silver-eagle-rounds/",
+    "https://www.monex.com/monex-silver-rounds-price-charts/",
     "https://www.monex.com/investing-in-silver/",
-    "https://www.monex.com/knowledge-base/silver-investing/",
+    "https://www.monex.com/silver-prices/",
   ],
 } as const;
 

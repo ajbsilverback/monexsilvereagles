@@ -17,8 +17,8 @@ export default function Footer() {
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed">
               Your trusted educational resource for {SITE_CONFIG.primaryProduct}. 
-              Helping investors understand government-minted silver coins with 
-              .999 fine purity and strong liquidity.
+              Helping investors understand privately-minted silver rounds with 
+              .999 fine purity and competitive premiums.
             </p>
           </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
                   href="/coin-specs"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
-                  Coin Specifications
+                  Round Specifications
                 </Link>
               </li>
               <li>
@@ -47,7 +47,7 @@ export default function Footer() {
                   href="/design-history"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
-                  Design &amp; History
+                  Design &amp; Craftsmanship
                 </Link>
               </li>
               <li>
@@ -78,7 +78,7 @@ export default function Footer() {
                   href="/where-to-buy"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
-                  Where to Buy Silver Coins
+                  Where to Buy Silver Rounds
                 </Link>
               </li>
               <li>
@@ -94,7 +94,7 @@ export default function Footer() {
                   href="/resources/coin-comparison"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
-                  Comparing Silver Coins
+                  Rounds vs Coins
                 </Link>
               </li>
               <li>

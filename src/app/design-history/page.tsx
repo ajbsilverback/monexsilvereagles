@@ -4,24 +4,24 @@ import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Silver Coin Design & History | Iconic Government Mint Designs",
+  title: "Monex Silver Eagle Round Design | 1 oz .999 Silver Round Features",
   description:
-    "Explore the history and design of silver bullion coins from government mints worldwide. Learn about iconic designs, artistic heritage, and what coin design signals to investors.",
+    "Explore the design of Monex Silver Eagle Rounds — 1 oz .999 fine silver rounds with clear weight and purity markings. Privately-minted, not government coins.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/design-history`,
   },
   openGraph: {
-    title: "Silver Coin Design & History | Iconic Government Mint Designs",
+    title: "Monex Silver Eagle Round Design | 1 oz .999 Silver Round Features",
     description:
-      "The story behind iconic silver coin designs from government mints worldwide and what they mean for modern silver investors.",
+      "Design features of Monex Silver Eagle Rounds: clear weight and purity markings. Privately-minted, not government coins.",
     url: `${SITE_CONFIG.domain}/design-history`,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Silver Coin Design & History",
+    title: "Monex Silver Eagle Round Design | 1 oz .999 Fine Silver",
     description:
-      "Explore the history and design of silver bullion coins from government mints worldwide.",
+      "Design features of Monex Silver Eagle Rounds — privately-minted 1 oz .999 fine silver rounds.",
   },
 };
 
@@ -29,9 +29,9 @@ export default function DesignHistoryPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Silver Coin Design & History",
+    name: "Monex Silver Eagle Round Design",
     description:
-      "The history and design origins of silver bullion coins from government mints worldwide.",
+      "The design and craftsmanship of Monex Silver Eagle Rounds, privately-minted silver rounds.",
     url: `${SITE_CONFIG.domain}/design-history`,
     publisher: {
       "@type": "Organization",
@@ -52,23 +52,38 @@ export default function DesignHistoryPage() {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-              Design <span className="accent-text">&amp; History</span>
+              Round <span className="accent-text">Design Features</span>
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              The story behind iconic silver coin designs from government mints worldwide, from classical artistry to modern bullion programs.
+              1 oz .999 fine silver rounds with clear markings for weight and purity verification.
             </p>
           </div>
+
+          {/* Important Note */}
+          <section className="card p-6 md:p-8 mb-10 border-amber-200 bg-amber-50">
+            <h2 className="text-xl font-display font-semibold text-slate-900 mb-3">
+              These Are Rounds, Not Government Coins
+            </h2>
+            <p className="text-slate-600 leading-relaxed">
+              Monex Silver Eagle Rounds are <strong className="text-slate-900">privately-minted silver rounds</strong>, 
+              distinct from official American Silver Eagle coins. They have no legal tender status or face value. 
+              The eagle imagery reflects traditional design but does not indicate government minting.
+            </p>
+          </section>
 
           {/* Introduction Section */}
           <section className="card p-6 md:p-8 mb-10">
             <h2 className="text-2xl font-display font-semibold text-slate-900 mb-4">
-              The Art of Silver Coinage
+              Investor-Focused Design
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Silver coins have been a medium of artistic expression and store of value for thousands of years. Modern silver bullion coins from government mints combine centuries of numismatic tradition with investment-grade quality.
+              Monex Silver Eagle Rounds are designed with investors in mind. Clear weight and purity markings 
+              enable straightforward verification. The consistent 1 oz sizing supports easy stacking and storage.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Each major silver coin program features distinctive designs that reflect national identity, artistic heritage, and the values of the issuing nation. These designs contribute to the coins&apos; recognition, authenticity, and liquidity in global markets.
+              While sharing .999 fine purity with government coins, rounds offer lower premiums because they 
+              lack legal tender production overhead. The design prioritizes silver content verification over 
+              numismatic complexity.
             </p>
           </section>
 
@@ -78,38 +93,39 @@ export default function DesignHistoryPage() {
               {/* Text Column */}
               <div className="md:col-span-7 order-2 md:order-1">
                 <h2 className="text-2xl font-display font-semibold text-slate-900 mb-4">
-                  Obverse: National Symbols & Heritage
+                  Obverse: Eagle Imagery
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  The obverse (front) of silver bullion coins typically features imagery that represents the issuing nation. Common themes include:
+                  The obverse (front) of Monex Silver Eagle Rounds features a striking eagle design that symbolizes strength and American tradition:
                 </p>
                 <ul className="space-y-3 text-slate-600 mb-4">
                   <li className="flex items-start gap-3">
                     <span className="text-slate-500">•</span>
-                    <span><strong className="text-slate-900">National symbols</strong>: Liberty, monarchs, or emblems representing the country of origin</span>
+                    <span><strong className="text-slate-900">Classic eagle motif</strong>: Timeless design representing American ideals</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-slate-500">•</span>
-                    <span><strong className="text-slate-900">Historical figures</strong>: Iconic representations from the nation&apos;s history</span>
+                    <span><strong className="text-slate-900">Detailed engraving</strong>: Quality private mint craftsmanship</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-slate-500">•</span>
-                    <span><strong className="text-slate-900">Artistic interpretations</strong>: Classic designs that have stood the test of time</span>
+                    <span><strong className="text-slate-900">Clean presentation</strong>: Professional appearance suitable for investment holdings</span>
                   </li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed">
-                  These designs serve dual purposes: establishing authenticity through government authority and creating collector appeal through artistic merit.
+                  While featuring eagle imagery, these are privately-minted rounds, distinct from official U.S. Silver Eagles produced by the U.S. Mint.
                 </p>
               </div>
               {/* Image Column */}
               <div className="md:col-span-5 flex justify-center items-center order-1 md:order-2">
-                <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
+                <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-square mx-auto">
                   <Image
-                    src="/silver-american-eagle-obverse.png"
-                    alt="Silver coin obverse design example"
+                    src="/monex-silver-eagle-rounds-obverse.png"
+                    alt="Monex Silver Eagle Round obverse design featuring classic eagle imagery"
                     fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 320px, 320px"
+                    className="object-contain drop-shadow-lg"
+                    sizes="(max-width: 640px) 280px, 320px"
+                    priority
                   />
                 </div>
               </div>
@@ -121,77 +137,77 @@ export default function DesignHistoryPage() {
             <div className="grid md:grid-cols-12 gap-8 items-center">
               {/* Image Column */}
               <div className="md:col-span-5 flex justify-center items-center">
-                <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
+                <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-square mx-auto">
                   <Image
-                    src="/silver-american-eagle-reverse.png"
-                    alt="Silver coin reverse design example"
+                    src="/monex-silver-eagle-rounds-reverse.png"
+                    alt="Monex Silver Eagle Round reverse design showing weight and purity specifications"
                     fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 320px, 320px"
+                    className="object-contain drop-shadow-lg"
+                    sizes="(max-width: 640px) 280px, 320px"
                   />
                 </div>
               </div>
               {/* Text Column */}
               <div className="md:col-span-7">
                 <h2 className="text-2xl font-display font-semibold text-slate-900 mb-4">
-                  Reverse: National Identity & Specifications
+                  Reverse: Specifications Display
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  The reverse (back) of silver coins typically displays national emblems, wildlife, or symbolic imagery that reinforces the coin&apos;s origin and authenticity.
+                  The reverse (back) of Monex Silver Eagle Rounds clearly displays key specifications that matter to investors:
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  Key information inscribed on the reverse includes the country of origin, denomination, weight, and purity specifications. This standardized information allows for immediate verification and supports global liquidity.
+                  Key information inscribed includes weight (1 troy ounce) and purity (.999 fine silver). This standardized marking allows for immediate verification and supports confidence in the silver content.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  Modern security features may also be incorporated into reverse designs, including micro-engraving and other anti-counterfeiting measures.
+                  Clear markings distinguish quality rounds from generic products and support verification during transactions.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Major Silver Coin Programs */}
+          {/* Rounds vs Coins Design */}
           <section className="card p-6 md:p-8 mb-10">
             <h2 className="text-2xl font-display font-semibold text-slate-900 mb-4">
-              Major Silver Coin Programs
+              Design Distinction: Rounds vs. Government Coins
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Government mints around the world produce silver bullion coins with distinctive designs and specifications:
+              Understanding the design differences between privately-minted rounds and government coins:
             </p>
             <div className="grid md:grid-cols-2 gap-4 mb-4">
               <div className="bg-slate-50 rounded-lg p-4">
-                <h3 className="text-slate-800 font-semibold mb-2">American Silver Eagle</h3>
+                <h3 className="text-slate-800 font-semibold mb-2">Monex Silver Eagle Rounds</h3>
                 <p className="text-slate-500 text-sm">
-                  Featuring Walking Liberty on the obverse and a heraldic eagle on the reverse. First minted in 1986 by the U.S. Mint.
+                  Privately minted with classic eagle design. No face value or legal tender markings. Focused on silver content and weight specifications.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-lg p-4">
-                <h3 className="text-slate-800 font-semibold mb-2">Canadian Maple Leaf</h3>
+                <h3 className="text-slate-800 font-semibold mb-2">American Silver Eagles</h3>
                 <p className="text-slate-500 text-sm">
-                  The iconic maple leaf design with .9999 fine purity. Produced by the Royal Canadian Mint since 1988.
+                  Minted by the U.S. Mint with Walking Liberty obverse and heraldic eagle reverse. Includes $1 face value and &ldquo;United States of America&rdquo; inscription.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-lg p-4">
-                <h3 className="text-slate-800 font-semibold mb-2">British Britannia</h3>
+                <h3 className="text-slate-800 font-semibold mb-2">Design Purpose</h3>
                 <p className="text-slate-500 text-sm">
-                  Features the classical figure of Britannia. Produced by the Royal Mint with advanced security features.
+                  Round designs focus on silver content verification. Coin designs incorporate national symbolism and legal tender requirements.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-lg p-4">
-                <h3 className="text-slate-800 font-semibold mb-2">Austrian Philharmonic</h3>
+                <h3 className="text-slate-800 font-semibold mb-2">Investor Considerations</h3>
                 <p className="text-slate-500 text-sm">
-                  Musical instruments of the Vienna Philharmonic Orchestra. Minted by the Austrian Mint.
+                  Rounds offer clean designs at lower premiums. Coins offer government backing with higher collector appeal.
                 </p>
               </div>
             </div>
             <p className="text-slate-500 text-sm">
-              Learn more about silver coins at{" "}
+              Learn more at{" "}
               <a
-                href="https://www.monex.com/silver-coins/"
+                href="https://www.monex.com/1-oz-monex-silver-eagle-rounds/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
                 className="text-slate-700 hover:underline font-medium"
               >
-                Monex Silver Coins
+                Monex Silver Eagle Rounds
               </a>
             </p>
           </section>
@@ -202,97 +218,65 @@ export default function DesignHistoryPage() {
               What Design Signals to Investors
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              For investors, coin design conveys more than visual appeal:
+              For investors, round design conveys important information:
             </p>
             <div className="space-y-4">
               <div className="border-l-2 border-slate-300 pl-4">
-                <h3 className="text-slate-900 font-semibold">Government Authority</h3>
+                <h3 className="text-slate-900 font-semibold">Quality Assurance</h3>
                 <p className="text-slate-500 text-sm">
-                  Official designs signal authenticity and weight/purity guarantees backed by sovereign governments.
+                  Professional design and clear markings indicate quality minting standards and accurate silver content.
                 </p>
               </div>
               <div className="border-l-2 border-slate-300 pl-4">
-                <h3 className="text-slate-900 font-semibold">Global Recognition</h3>
+                <h3 className="text-slate-900 font-semibold">Content Verification</h3>
                 <p className="text-slate-500 text-sm">
-                  Well-known designs are recognized by dealers and investors worldwide, facilitating transactions and supporting liquidity.
+                  Clearly inscribed weight and purity allow for easy verification and support confident transactions.
                 </p>
               </div>
               <div className="border-l-2 border-slate-300 pl-4">
-                <h3 className="text-slate-900 font-semibold">Collector Crossover</h3>
+                <h3 className="text-slate-900 font-semibold">Market Recognition</h3>
                 <p className="text-slate-500 text-sm">
-                  Artistic merit appeals to both bullion investors and numismatists, potentially broadening the buyer pool when selling.
+                  Established round designs are recognized by dealers, supporting liquidity through the Monex network.
                 </p>
               </div>
               <div className="border-l-2 border-slate-300 pl-4">
-                <h3 className="text-slate-900 font-semibold">Security Features</h3>
+                <h3 className="text-slate-900 font-semibold">Value Focus</h3>
                 <p className="text-slate-500 text-sm">
-                  Modern designs incorporate anti-counterfeiting measures that protect investors and support confidence in the secondary market.
+                  Clean, functional design without numismatic complexity keeps focus on silver investment value.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Design Evolution */}
-          <section className="card p-6 md:p-8 mb-10">
+          {/* Important Note */}
+          <section className="card p-6 md:p-8 mb-10 border-amber-200 bg-amber-50">
             <h2 className="text-2xl font-display font-semibold text-slate-900 mb-4">
-              Design Comparison: Major Silver Coins
+              Important Distinction
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Each major silver coin has distinctive design characteristics:
+              Monex Silver Eagle Rounds are <strong className="text-slate-900">privately-minted silver rounds</strong>, not official government coins:
             </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-slate-50 rounded-lg p-5">
-                <h3 className="text-slate-800 font-semibold mb-3">American Silver Eagle</h3>
-                <ul className="space-y-2 text-slate-500 text-sm">
-                  <li>• Adolph Weinman&apos;s 1916 Walking Liberty design</li>
-                  <li>• Heraldic eagle reverse (redesigned 2021)</li>
-                  <li>• Celebrates American freedom and ideals</li>
-                  <li>• Most traded silver coin in the world</li>
-                </ul>
-              </div>
-              <div className="bg-slate-50 rounded-lg p-5">
-                <h3 className="text-slate-800 font-semibold mb-3">Canadian Maple Leaf</h3>
-                <ul className="space-y-2 text-slate-500 text-sm">
-                  <li>• Iconic maple leaf national symbol</li>
-                  <li>• Queen Elizabeth II / King Charles III portrait</li>
-                  <li>• Highest purity (.9999 fine)</li>
-                  <li>• Advanced security features</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Timeline */}
-          <section className="card p-6 md:p-8 mb-10">
-            <h2 className="text-2xl font-display font-semibold text-slate-900 mb-6">
-              Key Dates in Silver Bullion History
-            </h2>
-            <div className="space-y-4">
-              <div className="flex gap-4">
-                <div className="text-slate-700 font-bold w-20 flex-shrink-0">1986</div>
-                <p className="text-slate-600">American Silver Eagle program launches</p>
-              </div>
-              <div className="flex gap-4">
-                <div className="text-slate-700 font-bold w-20 flex-shrink-0">1988</div>
-                <p className="text-slate-600">Canadian Silver Maple Leaf introduced</p>
-              </div>
-              <div className="flex gap-4">
-                <div className="text-slate-700 font-bold w-20 flex-shrink-0">1997</div>
-                <p className="text-slate-600">British Silver Britannia begins production</p>
-              </div>
-              <div className="flex gap-4">
-                <div className="text-slate-700 font-bold w-20 flex-shrink-0">2008</div>
-                <p className="text-slate-600">Austrian Silver Philharmonic launched</p>
-              </div>
-              <div className="flex gap-4">
-                <div className="text-slate-700 font-bold w-20 flex-shrink-0">2021</div>
-                <p className="text-slate-600">American Silver Eagle reverse redesigned</p>
-              </div>
-              <div className="flex gap-4">
-                <div className="text-slate-700 font-bold w-20 flex-shrink-0">Today</div>
-                <p className="text-slate-600">Silver bullion coins remain popular investment vehicles worldwide</p>
-              </div>
-            </div>
+            <ul className="space-y-2 text-slate-600">
+              <li className="flex items-start gap-3">
+                <span className="text-amber-600">•</span>
+                <span>Not produced by the U.S. Mint or any government mint</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-600">•</span>
+                <span>No legal tender status or face value</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-600">•</span>
+                <span>Distinct from American Silver Eagle coins</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-600">•</span>
+                <span>Valued for silver content, not numismatic rarity</span>
+              </li>
+            </ul>
+            <p className="text-slate-500 text-sm mt-4">
+              This distinction is important for accurate understanding of the product and its market position.
+            </p>
           </section>
 
           {/* Navigation CTAs */}
@@ -308,7 +292,7 @@ export default function DesignHistoryPage() {
                 Where to Buy
               </Link>
               <Link href="/coin-specs" className="btn-secondary">
-                Coin Specifications
+                Round Specifications
               </Link>
             </div>
           </div>

@@ -3,74 +3,75 @@ import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Silver Bullion Coin Specifications | Technical Details & Investor Facts",
+  title: "Monex Silver Eagle Round Specifications | 1 oz .999 Fine Silver",
   description:
-    "Complete technical specifications for 1 oz silver bullion coins: .999 fine purity, weight, dimensions, legal tender status, IRA eligibility, and premium factors.",
+    "Complete specifications for Monex Silver Eagle Rounds: .999 fine purity, 1 troy ounce weight, IRA eligibility, and premium factors. Privately-minted rounds for silver investors.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/coin-specs`,
   },
   openGraph: {
-    title: "Silver Bullion Coin Specifications | Technical Details",
+    title: "Monex Silver Eagle Round Specifications | 1 oz .999 Fine Silver",
     description:
-      "Complete technical specifications for 1 oz silver bullion coins: .999 purity, 1 troy oz weight, government-minted legal tender status, and IRA eligibility.",
+      "Complete specifications for Monex Silver Eagle Rounds: .999 purity, 1 troy oz weight, IRA eligibility for privately-minted silver rounds.",
     url: `${SITE_CONFIG.domain}/coin-specs`,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Silver Bullion Coin Specifications",
+    title: "Monex Silver Eagle Round Specifications",
     description:
-      "Complete technical specifications for 1 oz silver bullion coins: .999 purity, 1 troy oz weight, and IRA eligibility.",
+      "Complete specifications for Monex Silver Eagle Rounds: .999 purity, 1 troy oz weight, IRA eligibility.",
   },
 };
 
 const specsData = [
   { label: "Purity", value: ".999 fine silver", highlight: true },
   { label: "Silver Content", value: "1.0000 troy ounce (31.1035 grams)" },
-  { label: "Gross Weight", value: "Approximately 31.1 grams (varies by coin)" },
-  { label: "Diameter", value: "Varies by mint (typically 38-40mm)" },
-  { label: "Thickness", value: "Varies by mint (typically 2.5-3.2mm)" },
-  { label: "Face Value", value: "Varies by issuing nation" },
-  { label: "Mints", value: "U.S. Mint, Royal Canadian Mint, Royal Mint, others" },
-  { label: "Edge", value: "Typically reeded" },
-  { label: "IRA Eligible", value: "Yes (most government-minted coins)", highlight: true },
+  { label: "Gross Weight", value: "Approximately 31.1 grams" },
+  { label: "Diameter", value: "Approximately 39mm" },
+  { label: "Thickness", value: "Approximately 2.8mm" },
+  { label: "Minted By", value: "Private Mint" },
+  { label: "Legal Tender", value: "No (privately minted round)" },
+  { label: "Face Value", value: "None" },
+  { label: "Edge", value: "Reeded" },
+  { label: "IRA Eligible", value: "Yes (meets .999 purity requirement)", highlight: true },
 ];
 
 const faqData = [
   {
-    question: "What is the purity of government-minted silver coins?",
+    question: "What is the purity of Monex Silver Eagle Rounds?",
     answer:
-      "Most government-minted silver bullion coins are .999 fine silver, meaning they contain 99.9% pure silver. The Canadian Silver Maple Leaf is .9999 fine (99.99% pure). This high purity ensures maximum silver content and IRA eligibility.",
+      "Monex Silver Eagle Rounds are .999 fine silver, meaning they contain 99.9% pure silver. This high purity ensures maximum silver content and meets IRA eligibility requirements.",
   },
   {
-    question: "How much silver is in a 1 oz silver coin?",
+    question: "How much silver is in each round?",
     answer:
-      "Each 1 oz silver bullion coin contains exactly 1.0000 troy ounce (31.1035 grams) of pure silver. The gross weight may vary slightly due to manufacturing tolerances, but the silver content is guaranteed.",
+      "Each Monex Silver Eagle Round contains exactly 1.0000 troy ounce (31.1035 grams) of pure silver. Since the round is .999 fine, the gross weight equals the silver content.",
   },
   {
-    question: "Are silver bullion coins legal tender?",
+    question: "Are these rounds legal tender?",
     answer:
-      "Yes, government-minted silver bullion coins carry legal tender status in their country of origin. The American Silver Eagle has a $1 face value, though its silver content is worth significantly more. This government backing provides authenticity assurance.",
+      "No. Monex Silver Eagle Rounds are privately minted and have no legal tender status or face value. They are distinct from government-minted coins like American Silver Eagles. Rounds are valued purely for their silver content.",
   },
   {
-    question: "Can I hold silver coins in an IRA?",
+    question: "Can I hold these rounds in an IRA?",
     answer:
-      "Yes, many silver bullion coins meet IRS requirements for inclusion in a Precious Metals IRA. The .999 purity meets the IRS minimum fineness requirement. You will need a qualified custodian and approved depository to hold IRA-owned coins.",
+      "Yes. Monex Silver Eagle Rounds meeting .999 purity can qualify for Precious Metals IRAs. You will need a qualified custodian and approved depository. Consult your custodian for specific eligibility.",
   },
   {
-    question: "Why do silver coins have a premium over spot price?",
+    question: "Why do rounds have premiums over spot price?",
     answer:
-      "Premiums reflect minting costs, dealer margins, and supply/demand dynamics. Premiums account for mint production costs, distribution, the coin's legal tender status, and its recognition as a trusted government-minted product. Premiums vary based on market conditions.",
+      "Premiums cover minting costs and dealer margins. Privately-minted rounds typically have lower premiums than government coins because they lack legal tender status and government mint overhead.",
   },
   {
-    question: "How do different silver coins compare in specifications?",
+    question: "How do rounds compare to government coins?",
     answer:
-      "Most 1 oz government silver coins share similar specifications: .999 purity, 1 troy oz silver content, and legal tender status. Key differences include diameter, thickness, design, and the issuing mint. The Canadian Maple Leaf offers .9999 purity.",
+      "Both contain .999 fine silver and 1 troy ounce. The key difference: rounds are privately minted without legal tender status, while government coins have face value and government backing. Rounds typically offer lower premiums.",
   },
   {
-    question: "What affects silver coin premiums?",
+    question: "What affects round premiums?",
     answer:
-      "Key premium drivers include: mint production capacity, dealer inventory levels, overall demand for physical silver, the coin's recognition and liquidity, and broader precious metals market conditions. During high demand periods, premiums typically increase.",
+      "Premium drivers include: mint production costs, dealer margins, supply/demand dynamics, and market conditions. During high demand periods, premiums typically rise for all silver products.",
   },
 ];
 
@@ -78,9 +79,9 @@ export default function CoinSpecsPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Silver Bullion Coin Specifications",
+    name: "Monex Silver Eagle Round Specifications",
     description:
-      "Complete technical specifications and investor facts for 1 oz silver bullion coins.",
+      "Complete technical specifications and investor facts for Monex Silver Eagle Rounds.",
     url: `${SITE_CONFIG.domain}/coin-specs`,
     publisher: {
       "@type": "Organization",
@@ -118,12 +119,25 @@ export default function CoinSpecsPage() {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-              <span className="accent-text">Silver Coin</span> Specifications
+              <span className="accent-text">Round</span> Specifications
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Technical details and investor-facing facts for 1 oz silver bullion coins from major government mints.
+              Technical specifications for Monex Silver Eagle Rounds — privately-minted 
+              1 oz .999 fine silver rounds.
             </p>
           </div>
+
+          {/* Important Distinction Banner */}
+          <section className="card p-6 md:p-8 mb-10 border-amber-200 bg-amber-50">
+            <h2 className="text-xl font-display font-semibold text-slate-900 mb-3">
+              Important: These Are Rounds, Not Government Coins
+            </h2>
+            <p className="text-slate-600 leading-relaxed">
+              Monex Silver Eagle Rounds are <strong className="text-slate-900">privately-minted silver rounds</strong>, 
+              distinct from official government coins like American Silver Eagles. They have no legal tender 
+              status and no face value. Rounds are valued purely for their silver content.
+            </p>
+          </section>
 
           {/* Specifications Table */}
           <section className="card p-6 md:p-8 mb-10">
@@ -154,12 +168,12 @@ export default function CoinSpecsPage() {
               The .999 Purity Standard
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              At .999 fineness, government-minted silver coins contain 99.9% pure silver with minimal alloys.
+              At .999 fineness, Monex Silver Eagle Rounds contain 99.9% pure silver with minimal trace elements.
             </p>
             <ul className="space-y-3 text-slate-600">
               <li className="flex items-start gap-3">
                 <span className="text-slate-500 mt-1">•</span>
-                <span><strong className="text-slate-900">Maximum silver content</strong>: Virtually all of the coin&apos;s weight is pure silver</span>
+                <span><strong className="text-slate-900">Maximum silver content</strong>: Virtually all weight is pure silver</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-slate-500 mt-1">•</span>
@@ -167,92 +181,156 @@ export default function CoinSpecsPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-slate-500 mt-1">•</span>
-                <span><strong className="text-slate-900">Global recognition</strong>: Standard purity for major silver bullion coins worldwide</span>
+                <span><strong className="text-slate-900">Industry standard</strong>: Same purity as major government silver bullion</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-slate-500 mt-1">•</span>
-                <span><strong className="text-slate-900">Simple valuation</strong>: Silver content equals coin weight, making spot price calculations straightforward</span>
+                <span><strong className="text-slate-900">Simple valuation</strong>: 1 oz round = 1 oz of silver, straightforward spot calculations</span>
               </li>
             </ul>
             <p className="text-slate-500 text-sm mt-4">
-              Learn more about silver purity at{" "}
+              Learn more at{" "}
               <a
-                href="https://www.monex.com/silver-coins/"
+                href="https://www.monex.com/1-oz-monex-silver-eagle-rounds/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
                 className="text-slate-700 hover:underline font-medium"
               >
-                Monex Silver Coins
+                Monex Silver Eagle Rounds
               </a>
             </p>
           </section>
 
-          {/* Legal Tender Status */}
+          {/* Investor Benefits */}
           <section className="card p-6 md:p-8 mb-10">
             <h2 className="text-2xl font-display font-semibold text-slate-900 mb-4">
-              Legal Tender Status
+              Why Investors Choose Rounds
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Government-minted silver coins carry legal tender status in their country of origin. This government backing provides:
+              Silver rounds offer practical advantages for investors focused on silver accumulation:
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-slate-50 rounded-lg p-4">
-                <h3 className="text-slate-800 font-semibold mb-2">Authenticity Assurance</h3>
+                <h3 className="text-slate-800 font-semibold mb-2">Lower Premiums</h3>
                 <p className="text-slate-500 text-sm">
-                  Produced by sovereign mints with strict quality controls and anti-counterfeiting measures.
+                  Privately-minted rounds typically cost less per ounce than government coins, 
+                  meaning more silver for your investment dollar.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-lg p-4">
-                <h3 className="text-slate-800 font-semibold mb-2">Government Guarantee</h3>
+                <h3 className="text-slate-800 font-semibold mb-2">Stackability</h3>
                 <p className="text-slate-500 text-sm">
-                  Weight and purity backed by the issuing government.
+                  Uniform 1 oz sizing makes rounds easy to stack, count, and store efficiently. 
+                  Build positions over time at lower cost.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-lg p-4">
-                <h3 className="text-slate-800 font-semibold mb-2">Market Recognition</h3>
+                <h3 className="text-slate-800 font-semibold mb-2">Liquidity</h3>
                 <p className="text-slate-500 text-sm">
-                  Widely recognized and accepted by dealers worldwide, supporting liquidity.
+                  Quality .999 rounds are readily accepted by dealers. Monex Silver Eagle Rounds 
+                  have good liquidity through the Monex network.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-lg p-4">
-                <h3 className="text-slate-800 font-semibold mb-2">IRA Eligibility</h3>
+                <h3 className="text-slate-800 font-semibold mb-2">IRA Eligible</h3>
                 <p className="text-slate-500 text-sm">
-                  Legal tender status is one requirement for Precious Metals IRA inclusion.
+                  Rounds meeting .999 purity can qualify for tax-advantaged Precious Metals IRAs, 
+                  same as government coins.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* IRA Considerations */}
+          {/* Rounds vs Coins Comparison */}
           <section className="card p-6 md:p-8 mb-10">
             <h2 className="text-2xl font-display font-semibold text-slate-900 mb-4">
-              IRA Eligibility Considerations
+              Rounds vs. Government Coins
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Many silver bullion coins qualify for inclusion in a Precious Metals IRA (Self-Directed IRA). Key considerations:
+              Understanding the key differences between privately-minted rounds and government-issued coins:
             </p>
-            <ul className="space-y-3 text-slate-600 mb-4">
-              <li className="flex items-start gap-3">
-                <span className="text-emerald-600">✓</span>
-                <span>Meets IRS purity requirement (.999 minimum)</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-emerald-600">✓</span>
-                <span>Produced by an approved national mint</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-emerald-600">✓</span>
-                <span>Must be held by an IRS-approved custodian and depository</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-emerald-600">✓</span>
-                <span>Cannot be stored at home for IRA purposes</span>
-              </li>
-            </ul>
-            <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
-              <p className="text-slate-500 text-sm">
-                <strong className="text-slate-700">Note:</strong> This is general information, not tax or investment advice. Consult a qualified tax professional or IRA custodian for guidance specific to your situation.
-              </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-slate-300">
+                    <th className="text-left py-3 px-4 text-slate-700 font-display">Feature</th>
+                    <th className="text-center py-3 px-4 text-slate-800 font-display font-semibold">Silver Rounds</th>
+                    <th className="text-center py-3 px-4 text-slate-500 font-display">Government Coins</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-700">
+                  <tr className="border-b border-slate-200">
+                    <td className="py-3 px-4 font-medium">Purity</td>
+                    <td className="py-3 px-4 text-center">.999 fine</td>
+                    <td className="py-3 px-4 text-center">.999 fine</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-3 px-4 font-medium">Silver Content</td>
+                    <td className="py-3 px-4 text-center">1 troy oz</td>
+                    <td className="py-3 px-4 text-center">1 troy oz</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-3 px-4 font-medium">Minted By</td>
+                    <td className="py-3 px-4 text-center">Private Mints</td>
+                    <td className="py-3 px-4 text-center">Government Mints</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-3 px-4 font-medium">Legal Tender</td>
+                    <td className="py-3 px-4 text-center text-slate-500">No</td>
+                    <td className="py-3 px-4 text-center text-emerald-600">Yes</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-3 px-4 font-medium">Face Value</td>
+                    <td className="py-3 px-4 text-center text-slate-500">None</td>
+                    <td className="py-3 px-4 text-center">$1 (ASE)</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-3 px-4 font-medium">Typical Premium</td>
+                    <td className="py-3 px-4 text-center text-emerald-600 font-medium">Lower</td>
+                    <td className="py-3 px-4 text-center">Higher</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4 font-medium">IRA Eligible</td>
+                    <td className="py-3 px-4 text-center text-emerald-600">Yes*</td>
+                    <td className="py-3 px-4 text-center text-emerald-600">Yes</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-slate-500 text-xs mt-4">
+              *Rounds meeting .999 purity from approved sources may qualify for Precious Metals IRAs. Consult your custodian.
+            </p>
+          </section>
+
+          {/* Storage Considerations */}
+          <section className="card p-6 md:p-8 mb-10 bg-slate-50 border-slate-200">
+            <h2 className="text-2xl font-display font-semibold text-slate-900 mb-4">
+              Storage Considerations
+            </h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Silver rounds are practical for multiple storage options:
+            </p>
+            <div className="space-y-4">
+              <div className="border-l-2 border-slate-300 pl-4">
+                <h3 className="text-slate-900 font-semibold">Home Storage</h3>
+                <p className="text-slate-500 text-sm">
+                  Quality fireproof safe for personal holdings. Rounds stack efficiently. 
+                  Consider insurance for larger collections.
+                </p>
+              </div>
+              <div className="border-l-2 border-slate-300 pl-4">
+                <h3 className="text-slate-900 font-semibold">Bank Safe Deposit</h3>
+                <p className="text-slate-500 text-sm">
+                  Institutional security for modest holdings. Check box size for round tube storage.
+                </p>
+              </div>
+              <div className="border-l-2 border-slate-300 pl-4">
+                <h3 className="text-slate-900 font-semibold">Professional Vault Storage</h3>
+                <p className="text-slate-500 text-sm">
+                  Allocated storage at approved depositories. Required for IRA holdings. 
+                  Fully insured with audit trails.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -262,49 +340,43 @@ export default function CoinSpecsPage() {
               Understanding Premium Drivers
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Silver coins trade at a premium above the spot price of silver. Factors that influence premiums include:
+              Silver rounds trade at a premium above spot price. Factors that influence premiums:
             </p>
             <div className="space-y-4">
               <div className="border-l-2 border-slate-300 pl-4">
                 <h3 className="text-slate-900 font-semibold">Minting Costs</h3>
                 <p className="text-slate-500 text-sm">
-                  Sovereign mint production, quality control, and distribution expenses.
+                  Private mint production, quality control, and distribution. Lower overhead than government mints.
                 </p>
               </div>
               <div className="border-l-2 border-slate-300 pl-4">
                 <h3 className="text-slate-900 font-semibold">Dealer Margins</h3>
                 <p className="text-slate-500 text-sm">
-                  Wholesale and retail markups that fund dealer operations.
+                  Wholesale and retail markups that fund dealer operations and inventory.
                 </p>
               </div>
               <div className="border-l-2 border-slate-300 pl-4">
                 <h3 className="text-slate-900 font-semibold">Supply & Demand</h3>
                 <p className="text-slate-500 text-sm">
-                  Mint production capacity versus investor demand for physical silver.
+                  Mint capacity vs investor demand. High demand periods push premiums up temporarily.
                 </p>
               </div>
               <div className="border-l-2 border-slate-300 pl-4">
                 <h3 className="text-slate-900 font-semibold">Market Conditions</h3>
                 <p className="text-slate-500 text-sm">
-                  Economic uncertainty, inflation concerns, and safe-haven demand can increase premiums.
-                </p>
-              </div>
-              <div className="border-l-2 border-slate-300 pl-4">
-                <h3 className="text-slate-900 font-semibold">Product Recognition</h3>
-                <p className="text-slate-500 text-sm">
-                  Government backing and global recognition support competitive spreads.
+                  Economic uncertainty increases safe-haven demand and can elevate premiums across all silver products.
                 </p>
               </div>
             </div>
             <p className="text-slate-500 text-sm mt-4">
-              View current silver pricing at{" "}
+              View current pricing at{" "}
               <a
-                href="https://www.monex.com/silver-prices/"
+                href="https://www.monex.com/monex-silver-rounds-price-charts/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
                 className="text-slate-700 hover:underline font-medium"
               >
-                Monex Silver Prices
+                Monex Silver Rounds Price Charts
               </a>
             </p>
           </section>

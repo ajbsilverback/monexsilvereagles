@@ -3,81 +3,57 @@ import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Where to Buy Silver Bullion Coins | Independent Dealer Guide",
+  title: "Where to Buy 1 oz Silver Rounds | Monex Silver Eagle Buying Guide",
   description:
-    "Independent guide to buying silver bullion coins from online dealers, local coin shops, government mints, and authorized distributors. No endorsements. Educational information only.",
+    "Independent guide to buying Monex Silver Eagle Rounds — 1 oz .999 fine silver rounds. Compare dealers, understand premiums, evaluate buying considerations.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/where-to-buy`,
   },
   openGraph: {
-    title: "Where to Buy Silver Bullion Coins | Independent Dealer Guide",
+    title: "Where to Buy 1 oz Silver Rounds | Monex Silver Eagle Buying Guide",
     description:
-      "Independent guide to buying silver bullion coins from online dealers, local coin shops, and authorized sources. Educational information only.",
+      "Independent buying guide for 1 oz .999 fine silver rounds. Compare dealers, understand premiums.",
     url: `${SITE_CONFIG.domain}/where-to-buy`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Where to Buy Silver Bullion Coins | Independent Dealer Guide",
+    title: "Where to Buy 1 oz Silver Rounds | Monex Silver Eagle Buying Guide",
     description:
-      "Independent guide to buying silver bullion coins from online dealers, local coin shops, and authorized sources.",
+      "Independent buying guide for 1 oz .999 fine silver rounds.",
   },
 };
 
-// Online dealers data - multiple sources for comparison
-const onlineDealers = [
-  {
-    name: "Monex",
-    description:
-      "A precious metals dealer providing live market data and silver bullion coins alongside other silver products.",
-    url: "https://www.monex.com/silver-coins/",
-  },
+// Alternative silver round/coin dealers for comparison
+const additionalDealers = [
   {
     name: "JM Bullion",
     description:
-      "An established online precious metals dealer offering Silver Eagles, Maple Leafs, and other government-minted bullion.",
+      "An established online precious metals dealer offering silver rounds, coins, and bars from various mints.",
     url: "https://www.jmbullion.com/",
   },
   {
     name: "APMEX",
     description:
-      "One of the largest online bullion retailers with a wide selection of silver bullion coins in various conditions.",
+      "One of the largest online bullion retailers with a wide selection of silver products including rounds and coins.",
     url: "https://www.apmex.com/",
   },
   {
     name: "SD Bullion",
     description:
-      "An online dealer known for competitive pricing on silver coins and other government-minted bullion products.",
+      "An online dealer known for competitive pricing on silver rounds and other bullion products.",
     url: "https://sdbullion.com/",
-  },
-  {
-    name: "Goldline",
-    description:
-      "A precious metals dealer offering silver coins with personalized service and market insights.",
-    url: "https://www.goldline.com/",
-  },
-  {
-    name: "GovMint",
-    description:
-      "A collectible coins and precious metals dealer specializing in government-issued bullion including silver coins.",
-    url: "https://www.govmint.com/",
-  },
-  {
-    name: "Bullion Exchanges",
-    description:
-      "A New York-based bullion dealer offering silver bullion coins with multiple payment options.",
-    url: "https://bullionexchanges.com/",
   },
   {
     name: "Provident Metals",
     description:
-      "An online bullion dealer offering competitive prices on silver coins and other government bullion.",
+      "An online bullion dealer offering competitive prices on silver rounds and government coins.",
     url: "https://www.providentmetals.com/",
   },
   {
     name: "Money Metals Exchange",
     description:
-      "A precious metals dealer offering silver coins with price transparency and educational content.",
+      "A precious metals dealer offering silver rounds and coins with price transparency.",
     url: "https://www.moneymetals.com/",
   },
 ];
@@ -86,9 +62,9 @@ export default function WhereToBuyPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Where to Buy Silver Bullion Coins | Independent Buying Guide",
+    name: "Where to Buy Monex Silver Eagle Rounds | Independent Guide",
     description:
-      "Learn where to buy silver bullion coins online and locally, including major dealers, local coin shops, and authorized distributors.",
+      "Learn where to buy Monex Silver Eagle Rounds and compare silver round options from various dealers.",
     url: `${SITE_CONFIG.domain}/where-to-buy`,
     publisher: {
       "@type": "Organization",
@@ -97,45 +73,11 @@ export default function WhereToBuyPage() {
     },
   };
 
-  const itemListSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Where to buy silver bullion coins",
-    description:
-      "Types of vendors and platforms for purchasing silver bullion coins",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Online Bullion Dealers",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Government Mint Authorized Purchasers",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Local Coin Shops",
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: "Precious Metals IRA Custodians",
-      },
-    ],
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
 
       <main className="py-16">
@@ -145,22 +87,85 @@ export default function WhereToBuyPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
               <span className="accent-text">Where to Buy</span>
               <br />
-              <span className="text-slate-900">Silver Bullion Coins</span>
+              <span className="text-slate-900">Monex Silver Eagle Rounds</span>
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-6">
               An independent educational guide to understanding your options
-              for purchasing silver bullion coins from various authorized sources.
+              for purchasing Monex Silver Eagle Rounds and other silver products.
             </p>
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 max-w-2xl mx-auto">
               <p className="text-slate-600 text-sm">
                 <strong className="text-slate-800">Important:</strong>{" "}
                 {SITE_CONFIG.brandName} is an independent educational resource.
-                We do not sell precious metals and are not affiliated with any
-                of the dealers listed on this page. We encourage you to compare
+                We do not sell precious metals and are not affiliated with 
+                Monex or any of the dealers listed on this page. We encourage you to compare
                 prices and services across multiple dealers before making any
-                purchase. All purchasing decisions should be made after your
-                own research and due diligence.
+                purchase.
               </p>
+            </div>
+          </section>
+
+          {/* Monex - Primary Source */}
+          <section>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
+              <span className="accent-text">Monex</span>: Primary Source
+            </h2>
+            <div className="card p-8 max-w-3xl mx-auto">
+              <p className="text-slate-600 mb-6">
+                Monex Silver Eagle Rounds are available directly from Monex, 
+                a precious metals dealer that has been in business since 1967.
+              </p>
+              <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                  About Monex Silver Eagle Rounds
+                </h3>
+                <p className="text-slate-600 text-sm mb-3">
+                  These are privately-minted .999 fine silver rounds (not government coins) 
+                  available through Monex. Each round contains 1 troy ounce of pure silver.
+                </p>
+                <ul className="space-y-2 text-slate-600 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-slate-500">•</span>
+                    <span>.999 fine silver purity</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-slate-500">•</span>
+                    <span>1 troy ounce per round</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-slate-500">•</span>
+                    <span>Competitive premiums vs government coins</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-slate-500">•</span>
+                    <span>IRA-eligible (meets .999 purity requirement)</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://www.monex.com/1-oz-monex-silver-eagle-rounds/"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-800 text-white font-medium hover:bg-slate-700 transition-colors"
+                >
+                  <span>View Monex Silver Eagle Rounds</span>
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.monex.com/monex-silver-rounds-price-charts/"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition-colors"
+                >
+                  <span>View Price Charts</span>
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </section>
 
@@ -180,7 +185,7 @@ export default function WhereToBuyPage() {
                 <p className="text-slate-600 text-sm">
                   Research dealer history, customer reviews, and industry
                   accreditations. Look for established businesses with
-                  transparent track records and authorized dealer status.
+                  transparent track records.
                 </p>
               </div>
               <div className="card p-6">
@@ -192,8 +197,8 @@ export default function WhereToBuyPage() {
                 </h3>
                 <p className="text-slate-600 text-sm">
                   Compare premiums over spot price across multiple dealers.
-                  Silver coins typically carry 3-6% premiums over spot
-                  for standard bullion coins.
+                  Silver rounds typically carry lower premiums than government
+                  coins, making them cost-effective.
                 </p>
               </div>
               <div className="card p-6">
@@ -205,7 +210,7 @@ export default function WhereToBuyPage() {
                 </h3>
                 <p className="text-slate-600 text-sm">
                   Understand shipping costs, delivery times, and insurance
-                  coverage. For silver coins, fully insured and discreet
+                  coverage. For silver rounds, fully insured and discreet
                   shipping is essential for protection.
                 </p>
               </div>
@@ -218,105 +223,62 @@ export default function WhereToBuyPage() {
                 </h3>
                 <p className="text-slate-600 text-sm">
                   Check whether the dealer offers buyback programs. Silver
-                  coins have excellent liquidity, and reputable dealers maintain
+                  rounds have good liquidity, and reputable dealers maintain
                   competitive buyback prices.
                 </p>
               </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                  Authenticity Guarantee
-                </h3>
-                <p className="text-slate-600 text-sm">
-                  Ensure dealers guarantee authenticity. Silver coins from
-                  reputable dealers should come with verification and return
-                  policies if authenticity concerns arise.
-                </p>
-              </div>
-              <div className="card p-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Customer Support
-                </h3>
-                <p className="text-slate-600 text-sm">
-                  For precious metals purchases, responsive customer service
-                  is important. Evaluate accessibility and helpfulness before
-                  committing.
-                </p>
-              </div>
             </div>
           </section>
 
-          {/* Government Mints & Authorized Sources */}
+          {/* Rounds vs Coins Considerations */}
           <section>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
-              <span className="accent-text">Government Mints</span> & Authorized Sources
+              <span className="accent-text">Rounds vs Coins</span>: Buying Considerations
             </h2>
             <div className="card p-8 max-w-3xl mx-auto">
               <p className="text-slate-600 mb-6">
-                Silver bullion coins are minted by sovereign mints worldwide. 
-                While some mints sell directly to the public, most bullion coins 
-                are distributed through Authorized Purchasers and dealers.
+                When deciding between privately-minted rounds and government coins, 
+                consider these factors:
               </p>
-              <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                  Understanding the Distribution Chain
-                </h3>
-                <p className="text-slate-600 text-sm">
-                  Government mints typically sell bullion coins to a network of 
-                  <strong className="text-slate-900"> Authorized Purchasers</strong>, large 
-                  dealers who meet mint requirements. These Authorized Purchasers 
-                  then sell to smaller dealers and the public.
-                </p>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                  <h3 className="text-emerald-800 font-semibold mb-2">Advantages of Rounds</h3>
+                  <ul className="text-emerald-700 text-sm space-y-1">
+                    <li>• Lower premiums over spot</li>
+                    <li>• More silver per dollar</li>
+                    <li>• Same .999 purity</li>
+                    <li>• IRA-eligible</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                  <h3 className="text-slate-800 font-semibold mb-2">Advantages of Government Coins</h3>
+                  <ul className="text-slate-600 text-sm space-y-1">
+                    <li>• Legal tender status</li>
+                    <li>• Higher recognition</li>
+                    <li>• Government guarantee</li>
+                    <li>• Broader collector appeal</li>
+                  </ul>
+                </div>
               </div>
-              <div className="space-y-3">
-                <span className="text-slate-600">
-                  Major government mints include the{" "}
-                  <a
-                    href="https://www.usmint.gov/"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="text-slate-700 hover:underline font-medium"
-                  >
-                    U.S. Mint
-                  </a>,{" "}
-                  <a
-                    href="https://www.mint.ca/"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="text-slate-700 hover:underline font-medium"
-                  >
-                    Royal Canadian Mint
-                  </a>, and{" "}
-                  <a
-                    href="https://www.royalmint.com/"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="text-slate-700 hover:underline font-medium"
-                  >
-                    Royal Mint
-                  </a>.
-                </span>
-              </div>
+              <p className="text-slate-500 text-sm">
+                For investors focused on silver content and value, rounds offer excellent 
+                efficiency. For those prioritizing recognition and government backing, 
+                coins may be preferable.
+              </p>
             </div>
           </section>
 
-          {/* Online Bullion Dealers */}
+          {/* Other Silver Round/Coin Dealers */}
           <section>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
-              <span className="accent-text">Online</span> Bullion Dealers
+              <span className="accent-text">Other</span> Bullion Dealers
             </h2>
             <p className="text-slate-600 text-center mb-8 max-w-2xl mx-auto">
-              Major online dealers offer competitive pricing on silver bullion 
-              coins with convenient shipping. We encourage you to compare prices
-              across multiple sources before purchasing.
+              For comparison purposes, other dealers offer silver rounds and 
+              government coins. We encourage comparing prices across multiple sources.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {onlineDealers.map((dealer) => (
+              {additionalDealers.map((dealer) => (
                 <div
                   key={dealer.name}
                   className="card p-6 flex flex-col"
@@ -353,58 +315,7 @@ export default function WhereToBuyPage() {
             </div>
           </section>
 
-          {/* Local Coin Shops */}
-          <section>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
-              <span className="accent-text">Local</span> Coin Shops & Dealers
-            </h2>
-            <div className="card p-8 max-w-3xl mx-auto">
-              <p className="text-slate-600 mb-6">
-                Local coin shops and bullion dealers commonly stock silver bullion 
-                coins, offering convenient face-to-face transactions:
-              </p>
-              <ul className="space-y-4 mb-6">
-                <li className="flex items-start gap-3">
-                  <span className="text-slate-500 mt-1">•</span>
-                  <span className="text-slate-600">
-                    <strong className="text-slate-900">Immediate possession:</strong>{" "}
-                    Walk out with your silver coins the same day, no shipping delays.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-slate-500 mt-1">•</span>
-                  <span className="text-slate-600">
-                    <strong className="text-slate-900">Physical inspection:</strong>{" "}
-                    Examine coins before purchase and verify condition in person.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-slate-500 mt-1">•</span>
-                  <span className="text-slate-600">
-                    <strong className="text-slate-900">Build relationships:</strong>{" "}
-                    Regular customers often receive better pricing and first access 
-                    to inventory.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-slate-500 mt-1">•</span>
-                  <span className="text-slate-600">
-                    <strong className="text-slate-900">Local expertise:</strong>{" "}
-                    Many local dealers have decades of numismatic experience.
-                  </span>
-                </li>
-              </ul>
-              <div className="bg-slate-50 rounded-lg p-4">
-                <p className="text-slate-500 text-sm">
-                  <strong className="text-slate-600">Finding local dealers:</strong>{" "}
-                  Search for &ldquo;coin shop near me&rdquo; or &ldquo;silver dealer&rdquo;
-                  in your area. Call ahead to confirm silver coin availability and pricing.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Precious Metals IRAs */}
+          {/* IRA Considerations */}
           <section>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
               <span className="accent-text">Precious Metals</span> IRA Custodians
@@ -412,16 +323,16 @@ export default function WhereToBuyPage() {
             <div className="card p-8 max-w-3xl mx-auto">
               <p className="text-slate-600 mb-6">
                 For IRA purchases, you&apos;ll work with a specialized custodian 
-                who handles the regulatory requirements. Many silver bullion 
-                coins are IRS-approved for Precious Metals IRAs.
+                who handles the regulatory requirements. Monex Silver Eagle Rounds 
+                meeting .999 purity may qualify for Precious Metals IRAs.
               </p>
               <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">
                   IRA Eligibility Requirements
                 </h3>
                 <p className="text-slate-600 text-sm">
-                  Silver coins meeting IRS requirements (.999 minimum purity, 
-                  government-minted) qualify for Precious Metals IRAs. Coins must 
+                  Silver rounds meeting IRS requirements (.999 minimum purity from 
+                  approved sources) may qualify for Precious Metals IRAs. Rounds must 
                   be held by an approved custodian in an approved depository.
                 </p>
               </div>
@@ -437,7 +348,7 @@ export default function WhereToBuyPage() {
                   <span className="text-slate-500 mt-1">•</span>
                   <span className="text-slate-600">
                     <strong className="text-slate-900">Custodian handles purchases:</strong>{" "}
-                    The custodian facilitates the coin purchase and storage arrangement.
+                    The custodian facilitates the round purchase and storage arrangement.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -451,7 +362,7 @@ export default function WhereToBuyPage() {
             </div>
           </section>
 
-          {/* Price & Data Sources */}
+          {/* Pricing Sources */}
           <section>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
               Using Multiple <span className="accent-text">Pricing Sources</span>
@@ -472,20 +383,20 @@ export default function WhereToBuyPage() {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="https://www.monex.com/silver-prices/"
+                    href="https://www.monex.com/monex-silver-rounds-price-charts/"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     className="inline-flex items-center text-slate-700 hover:text-slate-900 transition-colors font-medium"
                   >
-                    <span>Monex Silver pricing</span>
+                    <span>Monex Silver Rounds Price Charts</span>
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
-                  <span className="text-slate-400 text-sm ml-2">· Prices provided by Monex</span>
+                  <span className="text-slate-400 text-sm ml-2">· Monex round pricing</span>
                 </li>
                 <li>
-                  <span className="text-slate-600">Cross-check prices at{" "}
+                  <span className="text-slate-600">Cross-check spot prices at{" "}
                     <a
                       href="https://www.kitco.com/"
                       target="_blank"

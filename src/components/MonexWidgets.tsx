@@ -25,7 +25,7 @@ export function MetalPriceChart() {
           <small className="text-gray-400">
             Prices provided by{" "}
             <a
-              href="https://www.monex.com/silver-prices/"
+              href="https://www.monex.com/monex-silver-rounds-price-charts/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent-primary hover:underline"
@@ -62,7 +62,7 @@ export function MetalPriceTable() {
           <small className="text-gray-400">
             Prices provided by{" "}
             <a
-              href="https://www.monex.com/silver-prices/"
+              href="https://www.monex.com/monex-silver-rounds-price-charts/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent-primary hover:underline"

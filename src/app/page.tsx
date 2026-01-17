@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 import QASection from "@/components/QASection";
 import LiveProductPriceCard from "@/components/LiveProductPriceCard";
@@ -8,24 +9,24 @@ import { homeQA } from "@/data/qa-content";
 import { fetchProductSpot, formatUSD } from "@/lib/monexSpot";
 
 export const metadata: Metadata = {
-  title: "Silver Bullion Coins | Expert Guide to .999 Fine Silver Coins",
+  title: "Monex Silver Eagle Rounds | 1 oz .999 Fine Silver Investment Guide",
   description:
-    "Comprehensive guide to silver bullion coins. Government-minted, .999 fine silver coins with strong liquidity. Learn about pricing, premiums, IRA eligibility, and investing.",
+    "Your guide to Monex Silver Eagle Rounds — 1 oz .999 fine silver rounds with lower premiums than government coins. Learn about liquidity, stackability, storage, and IRA eligibility.",
   alternates: {
     canonical: SITE_CONFIG.canonicalDomain,
   },
   openGraph: {
-    title: "Silver Bullion Coins | Expert Guide to .999 Fine Silver Coins",
+    title: "Monex Silver Eagle Rounds | 1 oz .999 Fine Silver Investment Guide",
     description:
-      "Comprehensive guide to silver bullion coins. Government-minted, .999 fine silver with strong liquidity.",
+      "1 oz .999 fine silver rounds with lower premiums than government coins. Learn about liquidity, storage, and IRA eligibility.",
     url: SITE_CONFIG.domain,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Silver Bullion Coins | Expert Guide to .999 Fine Silver Coins",
+    title: "Monex Silver Eagle Rounds | 1 oz .999 Fine Silver Investment Guide",
     description:
-      "Comprehensive guide to silver bullion coins. Government-minted, .999 fine silver coins.",
+      "1 oz .999 fine silver rounds with lower premiums. Liquidity, stackability, storage, IRA eligibility.",
   },
 };
 
@@ -44,15 +45,15 @@ export default async function HomePage() {
     }).format(rounded);
   };
   
-  // Get approximate coin price for display
-  const approxCoinPrice = priceData ? formatApproxPrice(priceData.ask) : "~$35";
+  // Get approximate round price for display
+  const approxRoundPrice = priceData ? formatApproxPrice(priceData.ask) : "~$35";
   
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `${SITE_CONFIG.brandName} - Your Guide to Silver Bullion Coins`,
+    name: `${SITE_CONFIG.brandName} - Your Guide to Monex Silver Eagle Rounds`,
     description:
-      "Comprehensive educational resource about silver bullion coins, government-minted .999 fine silver with strong liquidity.",
+      "Comprehensive educational resource about Monex Silver Eagle Rounds, privately-minted .999 fine silver rounds with competitive premiums.",
     url: SITE_CONFIG.domain,
     publisher: {
       "@type": "Organization",
@@ -64,14 +65,14 @@ export default async function HomePage() {
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "Silver Bullion Coin",
+    name: "Monex Silver Eagle Round",
     description:
-      "One troy ounce silver bullion coin, .999 fine purity, government-minted and recognized worldwide.",
+      "One troy ounce silver round, .999 fine purity, privately-minted and recognized for quality.",
     brand: {
       "@type": "Brand",
-      name: "Government Mint",
+      name: "Monex",
     },
-    category: "Silver Coins",
+    category: "Silver Rounds",
     material: "Silver",
     weight: {
       "@type": "QuantitativeValue",
@@ -94,46 +95,56 @@ export default async function HomePage() {
 
       {/* Full-Bleed Hero Section */}
       <section className="hero-fullbleed relative min-h-[100vh] flex items-center overflow-hidden -mt-20">
-        {/* Background Image Layer */}
-        <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/silver-american-eagle-hero.png')",
-              backgroundPosition: "center center",
-            }}
+        {/* Background base */}
+        <div className="absolute inset-0 bg-white" />
+
+        {/* Obverse Round - Large, Left Position */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-[5%] sm:left-[10%] md:left-[15%] lg:left-[25%] w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] pointer-events-none">
+          <Image
+            src="/monex-silver-eagle-rounds-obverse.png"
+            alt=""
+            fill
+            className="object-contain opacity-[0.12]"
+            sizes="(max-width: 640px) 400px, (max-width: 768px) 500px, (max-width: 1024px) 600px, 700px"
+            priority
           />
-          {/* Light overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
-          {/* Top gradient for nav readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-transparent" style={{ height: '200px' }} />
-          {/* Bottom gradient fade */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
         </div>
 
-        {/* Subtle coin motif accent */}
-        <div className="absolute right-[10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-slate-300/30 opacity-30 hidden lg:block" />
-        <div className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-slate-300/20 opacity-20 hidden lg:block" />
+        {/* Reverse Round - Smaller, Right Position, Offset Up */}
+        <div className="absolute top-[35%] -translate-y-1/2 right-[-5%] sm:right-[0%] md:right-[5%] lg:right-[10%] w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] pointer-events-none">
+          <Image
+            src="/monex-silver-eagle-rounds-reverse.png"
+            alt=""
+            fill
+            className="object-contain opacity-[0.08]"
+            sizes="(max-width: 640px) 300px, (max-width: 768px) 350px, (max-width: 1024px) 400px, 500px"
+            priority
+          />
+        </div>
+
+        {/* Gradient overlays for text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white pointer-events-none" />
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-52 pb-24">
           <div className="max-w-2xl">
             {/* Certificate line - typographic treatment */}
             <p className="text-[13px] text-slate-500 tracking-[0.2em] uppercase mb-6">
-              .999 Fine Silver&ensp;·&ensp;Government Minted&ensp;·&ensp;Worldwide Liquidity
+              .999 Fine Silver&ensp;·&ensp;Private Mint&ensp;·&ensp;Competitive Premiums
             </p>
 
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold leading-[0.95] mb-8 tracking-tight">
-              <span className="accent-text">Silver</span>
+              <span className="accent-text">Monex Silver</span>
               <br />
-              <span className="accent-text">Bullion Coins</span>
+              <span className="accent-text">Eagle Rounds</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-10 max-w-xl">
-              Government-minted silver coins with .999 fine purity. 
-              Trusted by investors worldwide for liquidity and value.
+              1 oz .999 fine silver rounds with competitive premiums. 
+              Stack efficiently, store easily, sell with confidence through established dealer networks.
             </p>
 
             {/* CTAs */}
@@ -173,29 +184,29 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-              <span className="accent-text">Live Silver Coin Pricing</span>
+              <span className="accent-text">Live Silver Round Pricing</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Current market data for 1 oz silver bullion coins.
+              Current market data for Monex Silver Eagle Rounds.
             </p>
           </div>
           <LiveProductPriceCard />
         </div>
       </section>
 
-      {/* Why Silver Bullion Coins Section */}
+      {/* Why Monex Silver Eagle Rounds Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-              Why <span className="accent-text">Silver Bullion Coins</span>?
+              Why <span className="accent-text">Monex Silver Eagle Rounds</span>?
             </h2>
             <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
-              Government-minted silver coins offer .999 fine purity with full government backing and worldwide recognition.
+              Privately-minted silver rounds offering .999 fine purity with competitive premiums and strong liquidity through the Monex network.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="card group">
               <div className="w-16 h-16 rounded-xl accent-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg
@@ -212,35 +223,11 @@ export default async function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-display font-semibold mb-4 text-slate-900">
+              <h3 className="text-xl font-display font-semibold mb-3 text-slate-900">
                 .999 Fine Purity
               </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Government-minted silver coins are struck from .999 fine silver, ensuring maximum silver content per coin with no base metal alloys.
-              </p>
-            </div>
-
-            <div className="card group">
-              <div className="w-16 h-16 rounded-xl accent-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-display font-semibold mb-4 text-slate-900">
-                Government Backed
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Produced by sovereign mints with legal tender status. Weight and purity are guaranteed, ensuring worldwide dealer recognition and trust.
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Each round contains 1 troy oz of .999 fine silver — maximum silver content with no base metal alloys.
               </p>
             </div>
 
@@ -260,29 +247,84 @@ export default async function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-display font-semibold mb-4 text-slate-900">
-                IRA Eligible
+              <h3 className="text-xl font-display font-semibold mb-3 text-slate-900">
+                Lower Premiums
               </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Many silver coins qualify for Precious Metals IRAs under IRS rules. The .999 purity exceeds the .999 fineness minimum required for tax-advantaged retirement accounts.
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Privately-minted rounds cost less per ounce than government coins — more silver for your dollar.
               </p>
             </div>
+
+            <div className="card group">
+              <div className="w-16 h-16 rounded-xl accent-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-display font-semibold mb-3 text-slate-900">
+                Easy Stackability
+              </h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Uniform 1 oz sizing makes rounds easy to stack, count, store, and transport efficiently.
+              </p>
+            </div>
+
+            <div className="card group">
+              <div className="w-16 h-16 rounded-xl accent-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-display font-semibold mb-3 text-slate-900">
+                Strong Liquidity
+              </h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Recognized .999 rounds sell readily through dealer networks at competitive prices.
+              </p>
+            </div>
+          </div>
+
+          {/* IRA Eligible Note */}
+          <div className="mt-8 text-center">
+            <p className="text-slate-500 text-sm">
+              <strong className="text-slate-700">IRA Eligible:</strong> Monex Silver Eagle Rounds meet the .999 fineness requirement for Precious Metals IRAs.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Who Buys Silver Coins Section */}
+      {/* Who Buys Silver Rounds Section */}
       <section className="py-16 md:py-24 relative overflow-hidden section-dark">
         <div className="absolute inset-0 accent-bar-pattern opacity-50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
-                Who Buys <span className="accent-text">Silver Bullion Coins</span>?
+                Who Buys <span className="accent-text">Silver Rounds</span>?
               </h2>
               <p className="text-lg md:text-xl text-slate-600 mb-8">
-                Silver bullion coins appeal to investors who prioritize 
-                purity, government backing, and strong liquidity.
+                Silver rounds appeal to investors focused on maximizing silver content 
+                per dollar without paying for legal tender status or numismatic premiums.
               </p>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -291,12 +333,12 @@ export default async function HomePage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                      Value-Focused Investors
+                      Value-Focused Stackers
                     </h3>
                     <p className="text-slate-600">
-                      Investors seeking affordable precious metals exposure choose silver 
-                      for its lower entry point compared to gold. Each coin contains exactly 
-                      one troy ounce of .999 fine silver.
+                      Investors accumulating silver by weight choose rounds for their 
+                      lower premiums. Each round contains exactly 1 troy oz of .999 fine 
+                      silver — more ounces per investment dollar.
                     </p>
                   </div>
                 </div>
@@ -309,9 +351,9 @@ export default async function HomePage() {
                       IRA Investors
                     </h3>
                     <p className="text-slate-600">
-                      Those building Precious Metals IRAs value government-minted coins for their 
-                      IRS-approved status, government guarantee, and strong 
-                      secondary market for eventual distributions.
+                      Retirement savers building Precious Metals IRAs value rounds that 
+                      meet .999 purity at competitive premiums, stretching IRA dollars 
+                      further than higher-premium government coins.
                     </p>
                   </div>
                 </div>
@@ -321,11 +363,12 @@ export default async function HomePage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                      Collectors & Investors
+                      Practical Storage Seekers
                     </h3>
                     <p className="text-slate-600">
-                      Iconic coin designs from government mints appeal to collectors 
-                      and bullion investors alike, combining artistry with intrinsic value.
+                      Investors who want efficient storage appreciate uniform round sizing. 
+                      Stack in tubes, store in safes, transport easily — rounds are practical 
+                      for both home storage and professional vaults.
                     </p>
                   </div>
                 </div>
@@ -338,16 +381,16 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Coin Comparison Section */}
+      {/* Rounds vs Coins Comparison Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-              Comparing <span className="accent-text">Silver Bullion Coins</span>
+              <span className="accent-text">Rounds vs Coins</span>: Key Differences
             </h2>
             <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
-              Understanding how different silver bullion coins compare 
-              helps you make informed investment decisions.
+              Understanding the distinction between privately-minted rounds 
+              and government-minted coins helps you make informed decisions.
             </p>
           </div>
 
@@ -359,13 +402,10 @@ export default async function HomePage() {
                     Feature
                   </th>
                   <th className="text-center py-4 px-6 text-slate-800 font-display font-semibold">
-                    Silver Eagle
+                    Silver Rounds
                   </th>
                   <th className="text-center py-4 px-6 text-slate-500 font-display">
-                    Maple Leaf
-                  </th>
-                  <th className="text-center py-4 px-6 text-slate-500 font-display">
-                    Britannia
+                    Government Coins
                   </th>
                 </tr>
               </thead>
@@ -373,94 +413,111 @@ export default async function HomePage() {
                 <tr className="border-b border-slate-200">
                   <td className="py-4 px-6 font-medium">Silver Purity</td>
                   <td className="py-4 px-6 text-center text-emerald-600 font-medium">
-                    .999
+                    .999 fine
                   </td>
-                  <td className="py-4 px-6 text-center">.9999</td>
-                  <td className="py-4 px-6 text-center">.999</td>
+                  <td className="py-4 px-6 text-center">.999 fine</td>
                 </tr>
                 <tr className="border-b border-slate-200">
-                  <td className="py-4 px-6 font-medium">Issuing Mint</td>
+                  <td className="py-4 px-6 font-medium">Minted By</td>
                   <td className="py-4 px-6 text-center text-slate-800 font-medium">
-                    U.S. Mint
+                    Private Mints
                   </td>
-                  <td className="py-4 px-6 text-center">Royal Canadian</td>
-                  <td className="py-4 px-6 text-center">Royal Mint</td>
+                  <td className="py-4 px-6 text-center">Government Mints</td>
                 </tr>
                 <tr className="border-b border-slate-200">
-                  <td className="py-4 px-6 font-medium">Face Value</td>
-                  <td className="py-4 px-6 text-center text-slate-800 font-medium">$1 USD</td>
-                  <td className="py-4 px-6 text-center">$5 CAD</td>
-                  <td className="py-4 px-6 text-center">£2 GBP</td>
+                  <td className="py-4 px-6 font-medium">Legal Tender</td>
+                  <td className="py-4 px-6 text-center text-slate-800 font-medium">No</td>
+                  <td className="py-4 px-6 text-center text-emerald-600">Yes</td>
                 </tr>
                 <tr className="border-b border-slate-200">
                   <td className="py-4 px-6 font-medium">IRA Eligible</td>
-                  <td className="py-4 px-6 text-center text-emerald-600 font-medium">Yes</td>
-                  <td className="py-4 px-6 text-center text-emerald-600">Yes</td>
+                  <td className="py-4 px-6 text-center text-emerald-600 font-medium">Yes*</td>
                   <td className="py-4 px-6 text-center text-emerald-600">Yes</td>
                 </tr>
                 <tr className="border-b border-slate-200">
                   <td className="py-4 px-6 font-medium">Typical Premium</td>
-                  <td className="py-4 px-6 text-center text-slate-800 font-medium">3-6%</td>
-                  <td className="py-4 px-6 text-center">2-5%</td>
-                  <td className="py-4 px-6 text-center">2-5%</td>
+                  <td className="py-4 px-6 text-center text-emerald-600 font-medium">Lower</td>
+                  <td className="py-4 px-6 text-center">Higher</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6 font-medium">Best For</td>
                   <td className="py-4 px-6 text-center text-slate-800 font-medium">
-                    U.S. Legal Tender
+                    Maximum Silver/Dollar
                   </td>
-                  <td className="py-4 px-6 text-center">Highest Purity</td>
-                  <td className="py-4 px-6 text-center">Security Features</td>
+                  <td className="py-4 px-6 text-center">Recognition/Liquidity</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <p className="text-slate-500 text-sm mt-4 text-center">
+            *Rounds meeting .999 purity from approved sources may qualify for Precious Metals IRAs. Consult your custodian.
+          </p>
         </div>
       </section>
 
-      {/* Design & History Section */}
+      {/* Design Section */}
       <section className="py-16 md:py-24 section-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-              Iconic <span className="accent-text">Design & Heritage</span>
+              <span className="accent-text">Distinctive Design</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
-              Silver bullion coins feature some of the most celebrated 
-              coin designs from mints around the world.
+              Monex Silver Eagle Rounds feature classic eagle imagery 
+              with quality craftsmanship and precise specifications.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="card">
+              <div className="flex justify-center mb-6">
+                <div className="relative w-48 h-48">
+                  <Image
+                    src="/monex-silver-eagle-rounds-obverse.png"
+                    alt="Monex Silver Eagle Round Obverse"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
               <h3 className="text-xl font-display font-semibold text-slate-900 mb-4">
-                Obverse: Iconic Imagery
+                Obverse: Eagle Design
               </h3>
               <p className="text-slate-600 mb-4">
-                Government-minted silver coins feature distinctive obverse designs, 
-                from Walking Liberty to national symbols, each representing 
-                the heritage and values of their issuing nation.
+                The obverse features a striking eagle design, symbolizing 
+                strength and American heritage. The clean, detailed 
+                engraving showcases quality private mint craftsmanship.
               </p>
               <p className="text-slate-500 text-sm">
-                <strong className="text-slate-700">Historical Note:</strong> Many designs 
-                have been celebrated for decades, becoming instantly recognizable 
-                symbols of quality and authenticity.
+                <strong className="text-slate-700">Note:</strong> While featuring 
+                eagle imagery, these are privately-minted rounds, not official 
+                U.S. Mint Silver Eagles.
               </p>
             </div>
 
             <div className="card">
+              <div className="flex justify-center mb-6">
+                <div className="relative w-48 h-48">
+                  <Image
+                    src="/monex-silver-eagle-rounds-reverse.png"
+                    alt="Monex Silver Eagle Round Reverse"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
               <h3 className="text-xl font-display font-semibold text-slate-900 mb-4">
-                Reverse: National Symbols
+                Reverse: Specifications
               </h3>
               <p className="text-slate-600 mb-4">
-                Reverse designs typically feature national emblems, wildlife, or 
-                symbolic imagery that connects the coin to its country of origin 
-                and reinforces its authenticity.
+                The reverse displays weight and purity specifications, 
+                clearly marking each round as containing one troy ounce 
+                of .999 fine silver.
               </p>
               <p className="text-slate-500 text-sm">
-                <strong className="text-slate-700">Global Recognition:</strong> These 
-                designs are recognized by dealers and investors worldwide, 
-                supporting strong liquidity in secondary markets.
+                <strong className="text-slate-700">Verification:</strong> Clear 
+                markings allow for easy verification of silver content 
+                and authenticity.
               </p>
             </div>
           </div>

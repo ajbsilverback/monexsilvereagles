@@ -54,18 +54,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Generate descriptive Monex anchor text for each article
 function getMonexAnchorText(slug: string): string {
   const anchorTextMap: Record<string, string> = {
-    "premiums-explained": "Monex silver market pricing information",
-    "coin-comparison": "Monex guide to investing in silver",
-    "storage-options": "Monex silver investment knowledge base",
-    "purity-advantages": "Monex silver coin product information",
-    "liquidity-considerations": "Monex silver investment resources",
+    "premiums-explained": "Monex Silver Rounds price charts",
+    "coin-comparison": "Monex Silver Eagle Rounds product page",
+    "storage-options": "Monex investing in silver resources",
+    "purity-advantages": "Monex Silver Eagle Rounds specifications",
+    "liquidity-considerations": "Monex silver prices",
     "market-dynamics": "Monex live silver prices",
-    "spreads-explained": "Monex silver price data",
-    "authentication-guide": "Monex silver investing knowledge base",
-    "ira-eligibility": "Monex silver IRA information",
+    "spreads-explained": "Monex Silver Rounds price charts",
+    "authentication-guide": "Monex Silver Eagle Rounds product page",
+    "ira-eligibility": "Monex investing in silver resources",
     "portfolio-allocation": "Monex investing in silver resources",
-    "first-time-buyers-guide": "Monex silver coin products and pricing",
-    "tax-considerations": "Monex silver investment knowledge base",
+    "first-time-buyers-guide": "Monex Silver Eagle Rounds product page",
+    "tax-considerations": "Monex investing in silver resources",
   };
   return anchorTextMap[slug] || "Monex silver resources";
 }
@@ -74,21 +74,21 @@ function getMonexAnchorText(slug: string): string {
 function generateAISummaryBullets(slug: string, title: string): string[] {
   const summaryMap: Record<string, string[]> = {
     "premiums-explained": [
-      "This article explains why silver coins have premiums over spot",
-      "Learn how premiums of 3-6% compare across different silver coins",
+      "This article explains why silver rounds have premiums over spot",
+      "Learn how round premiums compare to government coins",
       "Understand the factors that cause premium fluctuations",
       "Discover strategies to secure the best pricing when purchasing",
-      "Compare total cost of ownership for different silver coin options",
+      "Compare total cost of ownership for rounds vs coins",
     ],
     "coin-comparison": [
-      "This article compares Silver Eagle, Maple Leaf, and Britannia coins",
-      "Learn the key differences: .999 purity vs .9999 (Maple Leaf)",
-      "Understand that all 1 oz coins contain exactly 1 oz of silver",
-      "Discover which coin best fits different investment goals",
-      "Get guidance on IRA eligibility for each coin type",
+      "This article compares silver rounds with government coins",
+      "Learn the key differences: private mint vs government mint",
+      "Understand that all 1 oz products contain exactly 1 oz of silver",
+      "Discover which product best fits different investment goals",
+      "Get guidance on IRA eligibility for rounds and coins",
     ],
     "storage-options": [
-      "This article covers storage solutions for silver coins",
+      "This article covers storage solutions for silver rounds",
       "Learn about home safes, safe deposit boxes, and vault options",
       "Understand IRA storage requirements at approved depositories",
       "Discover insurance considerations for your silver holdings",
@@ -96,14 +96,14 @@ function generateAISummaryBullets(slug: string, title: string): string[] {
     ],
     "purity-advantages": [
       "This article explains the significance of .999 fine purity",
-      "Learn why purity standards matter for silver coins",
+      "Learn why purity standards matter for silver rounds",
       "Understand purity vs silver content (all contain 1 oz silver)",
       "Discover when higher purity matters for investors",
-      "Compare different silver coins for various use cases",
+      "Compare rounds vs coins for various use cases",
     ],
     "liquidity-considerations": [
-      "This article explains liquidity dynamics for silver coins",
-      "Learn how government-minted products ensure strong dealer demand",
+      "This article explains liquidity dynamics for silver rounds",
+      "Learn how dealer networks ensure strong demand",
       "Understand typical sale timelines (1-2 business days)",
       "Discover strategies for efficient buying and selling",
       "Get guidance on documentation for smooth transactions",
@@ -116,35 +116,35 @@ function generateAISummaryBullets(slug: string, title: string): string[] {
       "Get context for interpreting silver price movements",
     ],
     "spreads-explained": [
-      "This article explains bid-ask spreads on silver coins",
-      "Learn why silver coin spreads are typically 3-5%",
+      "This article explains bid-ask spreads on silver rounds",
+      "Learn why silver round spreads are competitive",
       "Understand how spreads affect your total cost of ownership",
       "Discover strategies to minimize spread impact on returns",
       "Calculate your break-even point including spread costs",
     ],
     "authentication-guide": [
-      "This article covers authentication for silver coins",
-      "Learn the official specifications for major silver coins",
-      "Understand professional authentication options (NGC, PCGS)",
-      "Discover visual verification techniques for government coins",
+      "This article covers authentication for silver rounds",
+      "Learn the specifications for quality silver rounds",
+      "Understand verification methods for .999 fine silver",
+      "Discover visual verification techniques",
       "Get guidance on avoiding counterfeits and red flags",
     ],
     "ira-eligibility": [
-      "This article explains silver coin IRA eligibility",
+      "This article explains silver round IRA eligibility",
       "Learn why .999 purity meets IRS requirements",
       "Understand custodian and depository requirements",
       "Discover the costs of IRA silver ownership",
       "Compare IRA ownership vs personal possession",
     ],
     "portfolio-allocation": [
-      "This article covers strategic allocation to silver coins",
+      "This article covers strategic allocation to silver rounds",
       "Learn typical precious metals allocations (5-15% of portfolio)",
       "Understand physical silver vs ETF trade-offs",
       "Discover dollar-cost averaging vs lump-sum strategies",
       "Get guidance on balancing IRA and personal holdings",
     ],
     "first-time-buyers-guide": [
-      "This article guides first-time buyers through silver coin purchases",
+      "This article guides first-time buyers through silver round purchases",
       "Learn how to evaluate and select reputable dealers",
       "Understand payment methods, settlement, and delivery",
       "Discover why dealer pricing varies and how to compare",
@@ -320,7 +320,7 @@ export default async function ResourcePage({ params }: Props) {
           {/* Internal Links */}
           <div className="mt-10 p-5 md:p-6 rounded-xl bg-slate-50 border border-slate-200">
             <p className="text-slate-600 mb-3 text-sm md:text-base">
-              Continue learning about silver bullion coins:
+              Continue learning about silver rounds:
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4">
               <Link
@@ -336,7 +336,7 @@ export default async function ResourcePage({ params }: Props) {
                 href="/where-to-buy"
                 className="inline-flex items-center text-slate-700 hover:text-slate-900 transition-colors font-medium"
               >
-                <span>Where to buy silver coins</span>
+                <span>Where to buy silver rounds</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -396,7 +396,7 @@ export default async function ResourcePage({ params }: Props) {
             <p className="text-slate-600 mb-6 max-w-xl mx-auto text-sm md:text-base">
               Explore more{" "}
               <Link href="/resources" className="text-slate-700 hover:underline font-medium">
-                resources about silver coins
+                resources about silver rounds
               </Link>{" "}
               or check{" "}
               <Link href="/live-silver-prices" className="text-slate-700 hover:underline font-medium">

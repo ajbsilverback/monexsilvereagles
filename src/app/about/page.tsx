@@ -3,24 +3,24 @@ import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "About Silver Bullion Coins | Independent Educational Resource",
+  title: "About This Site | Monex Silver Eagle Rounds Education",
   description:
-    "Silver Bullion Coins is an independent educational resource about silver bullion coins. We do not sell precious metals, provide financial advice, or endorse any dealers.",
+    "Independent educational resource about Monex Silver Eagle Rounds — 1 oz .999 fine silver rounds. We do not sell precious metals, provide advice, or endorse dealers. Not affiliated with Monex.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/about`,
   },
   openGraph: {
-    title: "About Silver Bullion Coins | Independent Educational Resource",
+    title: "About This Site | Monex Silver Eagle Rounds Education",
     description:
-      "Independent educational resource about silver bullion coins. We do not sell precious metals or provide financial advice.",
+      "Independent education about 1 oz .999 silver rounds. Not affiliated with Monex. We do not sell precious metals.",
     url: `${SITE_CONFIG.domain}/about`,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "About Silver Bullion Coins | Independent Educational Resource",
+    title: "About This Site | Monex Silver Eagle Rounds Education",
     description:
-      "Independent educational resource about silver bullion coins. We do not sell precious metals or provide financial advice.",
+      "Independent education about 1 oz .999 silver rounds. Not affiliated with Monex.",
   },
 };
 
@@ -28,9 +28,9 @@ export default function AboutPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About Silver Bullion Coins",
+    name: "About Monex Silver Eagle Rounds",
     description:
-      "Learn about Silver Bullion Coins, an independent educational resource about silver bullion coins.",
+      "Learn about Monex Silver Eagle Rounds, an independent educational resource about privately-minted silver rounds.",
     url: `${SITE_CONFIG.domain}/about`,
     publisher: {
       "@type": "Organization",
@@ -54,7 +54,7 @@ export default function AboutPage() {
               About <span className="accent-text">{SITE_CONFIG.brandName}</span>
             </h1>
             <p className="text-xl text-slate-600">
-              An independent educational resource for silver coin investors
+              An independent educational resource for silver round investors
             </p>
           </div>
 
@@ -68,14 +68,14 @@ export default function AboutPage() {
               <p className="text-slate-600 leading-relaxed mb-4">
                 {SITE_CONFIG.brandName} is an independent educational website
                 dedicated to helping investors understand{" "}
-                {SITE_CONFIG.primaryProduct}, including government-minted coins 
+                {SITE_CONFIG.primaryProduct}, privately-minted silver rounds 
                 with .999 fine purity.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 Our mission is to provide clear, unbiased information about 
-                silver coin investing, including pricing mechanics, purity 
-                standards, IRA eligibility, and how different silver coins compare 
-                to each other.
+                silver round investing, including pricing mechanics, purity 
+                standards, IRA eligibility, and how rounds compare 
+                to government-minted coins.
               </p>
             </section>
 
@@ -90,14 +90,14 @@ export default function AboutPage() {
                   <span className="text-red-500 mt-1">✕</span>
                   <span>
                     <strong className="text-slate-900">Not a dealer:</strong> We do
-                    not sell silver coins, bars, or any precious metals.
+                    not sell silver rounds, bars, or any precious metals.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">✕</span>
                   <span>
                     <strong className="text-slate-900">Not affiliated:</strong> We
-                    have no financial relationship with Monex, any government mint, or 
+                    have no financial relationship with Monex or 
                     any of the dealers mentioned on our site.
                   </span>
                 </li>
@@ -136,8 +136,8 @@ export default function AboutPage() {
                 <li className="flex items-start gap-3">
                   <span className="text-slate-500">•</span>
                   <span>
-                    <strong className="text-slate-900">Silver coin price</strong> (current
-                    ask price for silver bullion coins)
+                    <strong className="text-slate-900">Silver round price</strong> (current
+                    ask price for Monex Silver Eagle Rounds)
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -197,27 +197,19 @@ export default function AboutPage() {
               </ul>
             </section>
 
-            {/* About Silver Bullion Coins */}
+            {/* About Monex Silver Eagle Rounds */}
             <section className="card p-6 md:p-8 bg-slate-50 border-slate-200">
               <h2 className="text-2xl font-display font-semibold text-slate-900 mb-4">
-                About Silver Bullion Coins
+                About Monex Silver Eagle Rounds
               </h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Silver bullion coins are government-minted coins containing a specific 
-                weight of .999 fine silver. Popular examples include:
+                Monex Silver Eagle Rounds are privately-minted silver rounds 
+                containing .999 fine silver. Key characteristics:
               </p>
               <ul className="space-y-2 text-slate-600">
                 <li className="flex items-start gap-3">
                   <span className="text-slate-500">•</span>
-                  <span><strong className="text-slate-900">American Silver Eagle</strong> (U.S. Mint)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-slate-500">•</span>
-                  <span><strong className="text-slate-900">Canadian Silver Maple Leaf</strong> (Royal Canadian Mint)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-slate-500">•</span>
-                  <span><strong className="text-slate-900">British Silver Britannia</strong> (Royal Mint)</span>
+                  <span><strong className="text-slate-900">.999 fine silver</strong> purity</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-slate-500">•</span>
@@ -225,9 +217,26 @@ export default function AboutPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-slate-500">•</span>
-                  <span><strong className="text-slate-900">IRA eligible</strong> for Precious Metals IRAs</span>
+                  <span><strong className="text-slate-900">Privately minted</strong> (not a government coin)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-slate-500">•</span>
+                  <span><strong className="text-slate-900">No legal tender status</strong> (unlike government coins)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-slate-500">•</span>
+                  <span><strong className="text-slate-900">IRA-eligible</strong> (meets .999 purity requirement)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-slate-500">•</span>
+                  <span><strong className="text-slate-900">Competitive premiums</strong> vs government coins</span>
                 </li>
               </ul>
+              <p className="text-slate-500 text-sm mt-4">
+                <strong className="text-slate-700">Important distinction:</strong> These are 
+                privately-minted rounds, not official U.S. Silver Eagle coins from 
+                the U.S. Mint.
+              </p>
             </section>
 
             {/* Contact */}

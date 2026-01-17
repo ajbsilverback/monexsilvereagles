@@ -7,24 +7,24 @@ import { resourcesQA } from "@/data/qa-content";
 import { fetchProductSpot } from "@/lib/monexSpot";
 
 export const metadata: Metadata = {
-  title: "Silver Bullion Coin Educational Resources & Investment Guides",
+  title: "Silver Round Educational Resources & Investment Guides",
   description:
-    "In-depth educational guides on silver bullion coins covering premiums, coin comparisons, storage options, IRA eligibility, market dynamics, and portfolio allocation strategies.",
+    "In-depth educational guides on silver rounds covering premiums, round vs coin comparisons, storage options, IRA eligibility, market dynamics, and portfolio allocation strategies.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/resources`,
   },
   openGraph: {
-    title: "Silver Bullion Coin Educational Resources & Investment Guides",
+    title: "Silver Round Educational Resources & Investment Guides",
     description:
-      "In-depth educational guides on silver bullion coins covering premiums, storage, coin comparisons, and portfolio strategies.",
+      "In-depth educational guides on silver rounds covering premiums, storage, comparisons, and portfolio strategies.",
     url: `${SITE_CONFIG.domain}/resources`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Silver Bullion Coin Educational Resources & Investment Guides",
+    title: "Silver Round Educational Resources & Investment Guides",
     description:
-      "In-depth educational guides on silver coins covering premiums, storage, and investment strategies.",
+      "In-depth educational guides on silver rounds covering premiums, storage, and investment strategies.",
   },
 };
 
@@ -52,9 +52,9 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Silver Bullion Coin Resources & Educational Guides",
+    name: "Silver Round Resources & Educational Guides",
     description:
-      "Comprehensive educational resources about silver bullion coins covering premiums, comparisons, storage, and investment strategies.",
+      "Comprehensive educational resources about silver rounds covering premiums, comparisons, storage, and investment strategies.",
     url: `${SITE_CONFIG.domain}/resources`,
     publisher: {
       "@type": "Organization",
@@ -132,20 +132,20 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
             </h1>
 
             <p className="text-xl text-slate-600 leading-relaxed mt-6">
-              Deepen your understanding of silver bullion coins and the 
+              Deepen your understanding of silver rounds and the 
               broader silver market with our comprehensive guides. Whether you&apos;re 
-              comparing coins, understanding premiums, or planning storage, our 
+              comparing rounds vs coins, understanding premiums, or planning storage, our 
               resources provide the insights you need. Check{" "}
               <Link href="/live-silver-prices" className="text-slate-700 hover:underline font-medium">
                 current silver prices
               </Link>
               , explore our{" "}
               <Link href="/where-to-buy" className="text-slate-700 hover:underline font-medium">
-                independent buying guide
+                buying guide
               </Link>
               , or return to our{" "}
               <Link href="/" className="text-slate-700 hover:underline font-medium">
-                Silver Bullion Coins overview
+                Monex Silver Eagle Rounds overview
               </Link>.
             </p>
           </div>
@@ -272,7 +272,7 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
           <p className="text-slate-600 mb-6">
             View live{" "}
             <Link href="/live-silver-prices" className="text-slate-700 hover:underline font-medium">
-              silver coin pricing and market data
+              silver round pricing and market data
             </Link>{" "}
             to inform your investment decisions.
           </p>
