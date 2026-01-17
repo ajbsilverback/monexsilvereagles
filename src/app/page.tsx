@@ -95,36 +95,26 @@ export default async function HomePage() {
 
       {/* Full-Bleed Hero Section */}
       <section className="hero-fullbleed relative min-h-[100vh] flex items-center overflow-hidden -mt-20">
-        {/* Background base */}
-        <div className="absolute inset-0 bg-white" />
-
-        {/* Obverse Round - Large, Left Position */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-[5%] sm:left-[10%] md:left-[15%] lg:left-[25%] w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] pointer-events-none">
-          <Image
-            src="/monex-silver-eagle-rounds-obverse.png"
-            alt=""
-            fill
-            className="object-contain opacity-[0.12]"
-            sizes="(max-width: 640px) 400px, (max-width: 768px) 500px, (max-width: 1024px) 600px, 700px"
-            priority
+        {/* Background Image Layer */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url('/monex-silver-eagle-rounds-hero.png')",
+              backgroundPosition: "center center",
+            }}
           />
+          {/* Light overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
+          {/* Top gradient for nav readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-transparent" style={{ height: '200px' }} />
+          {/* Bottom gradient fade */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
         </div>
 
-        {/* Reverse Round - Smaller, Right Position, Offset Up */}
-        <div className="absolute top-[35%] -translate-y-1/2 right-[-5%] sm:right-[0%] md:right-[5%] lg:right-[10%] w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] pointer-events-none">
-          <Image
-            src="/monex-silver-eagle-rounds-reverse.png"
-            alt=""
-            fill
-            className="object-contain opacity-[0.08]"
-            sizes="(max-width: 640px) 300px, (max-width: 768px) 350px, (max-width: 1024px) 400px, 500px"
-            priority
-          />
-        </div>
-
-        {/* Gradient overlays for text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white pointer-events-none" />
+        {/* Subtle coin motif accent */}
+        <div className="absolute right-[10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-slate-300/30 opacity-30 hidden lg:block" />
+        <div className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-slate-300/20 opacity-20 hidden lg:block" />
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-52 pb-24">
